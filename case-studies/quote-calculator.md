@@ -34,17 +34,16 @@ Three sequential bets:
 
 ## The System (current)
 
-```
-Customer email ─► AI parser (Kimi K2) ─► Pre-filled quote form
-                                                  │
-                                                  ▼
-                  Pricing engine (14 trip types × 14 vehicles)
-                  │       │       │
-                  ▼       ▼       ▼
-           Azure Maps  Samsara  Demand calendar
-                                                  │
-                                                  ▼
-                          QuoteBot validate → send → book to dispatch
+```mermaid
+flowchart LR
+    A[📧 Customer Email] --> B[AI Parser\nKimi K2]
+    B --> C[Pre-filled Quote Form]
+    C --> D[Pricing Engine\n14 trip types × 14 vehicles]
+    D --> E[Azure Maps\nGeocode]
+    D --> F[Samsara\nFleet Availability]
+    D --> G[Demand Calendar]
+    E & F & G --> H[QuoteBot\nValidate & Send]
+    H --> I[✅ Booked to Dispatch]
 ```
 
 Notable design choices: no build step, vanilla ES modules, single-file Node proxy, demand calendar as a config file, full Playwright regression suite, rate-limit-aware on-disk catalog caching.

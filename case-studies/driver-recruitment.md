@@ -21,6 +21,19 @@ Constraints:
 - Whatever I built had to load instantly on a phone — most CDL applicants apply from a parking lot on a break.
 - The recruiter and marketing team needed to own the results, not interpret a spreadsheet.
 
+## The Funnel
+
+```mermaid
+flowchart LR
+    A[Indeed / ZipRecruiter\nLinkedIn / Facebook] -->|UTM-tagged URL| B[charterbusdrivers.com\nLanding Page]
+    B --> C[GA4 Event Capture\nSource persisted on landing]
+    C --> D[Apply Click\nor Phone Click]
+    D --> E[✅ Applicant attributed\nto source channel]
+    E --> F[Cost-per-applicant\nby channel in GA4]
+```
+
+---
+
 ## The Approach
 
 Two bets:

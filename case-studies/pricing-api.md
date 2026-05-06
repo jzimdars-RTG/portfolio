@@ -7,6 +7,20 @@
 
 ---
 
+## The Arc
+
+```mermaid
+flowchart LR
+    A[💬 Stakeholder Interviews\nTribal knowledge gathering] --> B[📊 Excel Unified Model\nProve the logic first]
+    B --> C[🤖 Quote Calculator\nAI platform in daily use]
+    C --> D[🏗️ Pricing API\n.NET 8 · 9 controllers · 22 entities]
+    D --> E[🌐 Customer Self-Service]
+    D --> F[🤝 Affiliate Network]
+    D --> G[📱 Mobile PWA]
+```
+
+---
+
 ## Context: where this fits in the arc
 
 This is the third chapter of the same project.

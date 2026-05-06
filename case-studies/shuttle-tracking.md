@@ -8,6 +8,19 @@
 ## TL;DR
 U-M Hospital shuttle riders couldn't see where their shuttle was, so they called dispatch — every day, hundreds of times. I built a public, mobile-friendly real-time map fed by Samsara fleet telemetry through an Azure Functions proxy. Customer status inquiries dropped 40%; dispatch saved 1,095 hours/year.
 
+## How It Works
+
+```mermaid
+flowchart LR
+    A[🚐 Vehicle GPS\nSamsara Fleet Telemetry] --> B[Azure Functions Proxy\nSanitize · No PII]
+    B --> C[Public PWA\nLeaflet.js Map]
+    C --> D[📱 Rider Phone\nNo login · No install]
+    D --> E[✅ Rider sees shuttle]
+    E --> F[📞 Fewer calls to dispatch\n−40% status inquiries]
+```
+
+---
+
 ## The Problem
 The U-M Hospital shuttle is a critical service for patients, employees, and visitors. The previous customer experience was: stand at a stop, wait, call dispatch if it took too long. Dispatch was fielding hundreds of "where's my shuttle?" calls a day — every one of them a workflow interruption that risked a worse failure elsewhere in the operation.
 

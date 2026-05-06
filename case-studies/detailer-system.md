@@ -10,6 +10,19 @@
 ## TL;DR
 Vehicle detailing was a black box: dispatch had no visibility into which vehicles were clean and ready until a chauffeur radioed in. I built a real-time tablet app for the garage floor with a 14-point cleaning checklist, automatic time-tracking, manager review, and live updates across every device. Dispatch can now see vehicle readiness in real time and prioritize accordingly.
 
+## How It Works
+
+```mermaid
+flowchart TD
+    A[🧹 Detailer\nTablet on garage floor] -->|14-point checklist| B[Socket.io\nReal-time sync]
+    B --> C[👔 Manager\nReview queue]
+    B --> D[📡 Dispatch\nLive readiness view]
+    C -->|Approve| E[✅ Vehicle cleared for service]
+    D --> F[🚗 Prioritize next job]
+```
+
+---
+
 ## The Problem
 The detailing bay was the operational blind spot of the company. Three groups had three different problems:
 - **Detailers** had no clear queue or accountability.

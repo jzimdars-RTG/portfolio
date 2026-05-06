@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joshua Zimdars — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --surface2: #1a1a26;
+      --border: #2a2a3a;
+      --accent: #6366f1;
+      --accent2: #8b5cf6;
+      --accent3: #06b6d4;
+      --text: #e2e2ef;
+      --muted: #8888aa;
+      --success: #10b981;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NOISE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(99,102,241,0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 80% 80%, rgba(139,92,246,0.1) 0%, transparent 50%);
+      animation: pulse-bg 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulse-bg {
+      from { opacity: 0.7; }
+      to   { opacity: 1; }
+    }
+
+    /* animated grid lines */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: grid-scroll 20s linear infinite;
+    }
+
+    @keyframes grid-scroll {
+      from { transform: translateY(0); }
+      to   { transform: translateY(60px); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(99,102,241,0.3);
+      border-radius: 100px;
+      padding: 0.3rem 1rem;
+      margin-bottom: 1.5rem;
+      animation: fade-up 0.6s ease both;
+    }
+
+    .hero-name {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      animation: fade-up 0.6s 0.1s ease both;
+    }
+
+    .hero-name span {
+      background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-title {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-top: 1rem;
+      animation: fade-up 0.6s 0.2s ease both;
+    }
+
+    .hero-summary {
+      max-width: 620px;
+      margin: 1.5rem auto 0;
+      font-size: 1.05rem;
+      color: #b0b0cc;
+      animation: fade-up 0.6s 0.3s ease both;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-top: 2.5rem;
+      animation: fade-up 0.6s 0.4s ease both;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent), var(--accent3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      animation: fade-up 0.6s 0.5s ease both;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent2);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(99,102,241,0.35);
+    }
+
+    .btn-ghost {
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      animation: fade-in 1s 1s ease both;
+    }
+
+    .scroll-indicator::after {
+      content: '';
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--muted), transparent);
+      animation: scroll-line 1.5s ease-in-out infinite;
+    }
+
+    @keyframes scroll-line {
+      0%   { opacity: 1; transform: scaleY(1) translateY(0); }
+      100% { opacity: 0; transform: scaleY(0.5) translateY(20px); }
+    }
+
+    /* ── SECTION BASE ── */
+    section {
+      position: relative;
+      z-index: 1;
+      padding: 6rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-heading {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      max-width: 560px;
+      margin-bottom: 3rem;
+    }
+
+    /* ── TIMELINE (Experience) ── */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      bottom: 0.5rem;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), var(--accent2), transparent);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .timeline-item.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -2.4rem;
+      top: 0.35rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--bg);
+      box-shadow: 0 0 12px rgba(99,102,241,0.6);
+    }
+
+    .timeline-date {
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-role {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.1rem;
+    }
+
+    .timeline-company {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-body {
+      color: #b0b0cc;
+      font-size: 0.95rem;
+    }
+
+    /* ── CASE STUDY CARDS ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      opacity: 0;
+      transform: translateY(24px);
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+      background: var(--surface2);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(99,102,241,0.15);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .card-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+      background: rgba(99,102,241,0.15);
+      color: var(--accent);
+      width: fit-content;
+    }
+
+    .card-badge.green {
+      background: rgba(16,185,129,0.12);
+      color: var(--success);
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      flex: 1;
+    }
+
+    .card-metrics {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 0.25rem;
+    }
+
+    .metric-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.78rem;
+      color: var(--accent3);
+      background: rgba(6,182,212,0.08);
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+    }
+
+    .card-arrow {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-top: 0.25rem;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover .card-arrow {
+      transform: translateX(4px);
+    }
+
+    /* ── SKILLS ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-group {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .skill-group.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .skill-group:hover {
+      border-color: rgba(99,102,241,0.4);
+    }
+
+    .skill-group-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .skill-tag {
+      font-size: 0.78rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      color: #c0c0dd;
+      padding: 0.15rem 0.55rem;
+      border-radius: 6px;
+    }
+
+    /* ── CONTACT STRIP ── */
+    .contact-strip {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .contact-strip h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-strip p {
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.82rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fade-in {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(12px);
+      background: rgba(10,10,15,0.7);
+      border-bottom: 1px solid rgba(42,42,58,0);
+      transition: border-color 0.3s ease;
+    }
+
+    nav.scrolled {
+      border-bottom-color: var(--border);
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1rem;
+      background: linear-gradient(135deg, var(--accent), var(--accent3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .hero-stats { gap: 1.5rem; }
+      .stat-number { font-size: 1.5rem; }
+      .nav-links { display: none; }
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--border), transparent);
+      margin: 0 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a class="nav-logo" href="#">JZ</a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Strategy &amp; Operations · AI-Native Builder</span>
+      <h1 class="hero-name">Joshua <span>Zimdars</span></h1>
+      <p class="hero-title">Business Systems Specialist &amp; EA to the CEO/CFO · Golden Limousine International · Ann Arbor, MI</p>
+      <p class="hero-summary">
+        I turn ambiguous business problems into shipped systems. Over 18 months I rebuilt a 35-year-old company's entire S&amp;O stack — pricing, sales ops, dispatch, customer experience, and executive reporting — self-taught, using AI as my primary building tool.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">2,800+</span>
+          <span class="stat-label">hours saved/year</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">10×</span>
+          <span class="stat-label">faster sales response</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">100+</span>
+          <span class="stat-label">markets covered</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">5K+</span>
+          <span class="stat-label">monthly PWA riders</span>
+        </div>
+      </div>
+      <div class="hero-links">
+        <a href="#work" class="btn btn-primary">View Case Studies →</a>
+        <a href="https://github.com/jzimdars-RTG/portfolio" class="btn btn-ghost" target="_blank">GitHub Portfolio</a>
+        <a href="https://linkedin.com/in/joshua-zimdars-1321a624b" class="btn btn-ghost" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">scroll</div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- CASE STUDIES -->
+  <section id="work">
+    <p class="section-label">Case Studies</p>
+    <h2 class="section-heading">Five systems. All in production.</h2>
+    <p class="section-sub">Full design narrative, metrics, and what I'd do differently — in the GitHub repo.</p>
+
+    <div class="cards-grid">
+
+      <a class="card" href="https://github.com/jzimdars-RTG/portfolio/blob/main/case-studies/quote-calculator.md" target="_blank">
+        <div class="card-icon">🤖</div>
+        <span class="card-badge">In Active Development</span>
+        <div class="card-title">Quote Calculator</div>
+        <div class="card-desc">AI-assisted pricing &amp; dispatch platform. Parses customer emails with Kimi K2, prices any trip across 14 trip types × 14 vehicle classes, books to dispatch.</div>
+        <div class="card-metrics">
+          <span class="metric-pill">⚡ 20–34 min → under 3</span>
+          <span class="metric-pill">📊 1,800+ hrs/yr saved</span>
+        </div>
+        <div class="card-arrow">Read case study →</div>
+      </a>
+
+      <a class="card" href="https://github.com/jzimdars-RTG/portfolio/blob/main/case-studies/pricing-api.md" target="_blank">
+        <div class="card-icon">🏗️</div>
+        <span class="card-badge green">Phase 1 Live</span>
+        <div class="card-title">Pricing API (.NET 8)</div>
+        <div class="card-desc">Re-platformed the rate card from Excel onto a versioned .NET 8 / EF Core / Azure SQL API. 9 controllers, 22 entities, 10-phase product roadmap.</div>
+        <div class="card-metrics">
+          <span class="metric-pill">🔌 Powers all future surfaces</span>
+        </div>
+        <div class="card-arrow">Read case study →</div>
+      </a>
+
+      <a class="card" href="https://github.com/jzimdars-RTG/portfolio/blob/main/case-studies/shuttle-tracking.md" target="_blank">
+        <div class="card-icon">🚐</div>
+        <span class="card-badge green">Production</span>
+        <div class="card-title">Shuttle Tracking PWA</div>
+        <div class="card-desc">Real-time vehicle map for 5,000+ monthly U-M Hospital riders. No login, no install. Samsara telemetry → Azure Functions proxy → Leaflet.js.</div>
+        <div class="card-metrics">
+          <span class="metric-pill">📉 −40% status calls</span>
+          <span class="metric-pill">⏱ 1,095 hrs/yr freed</span>
+        </div>
+        <div class="card-arrow">Read case study →</div>
+      </a>
+
+      <a class="card" href="https://github.com/jzimdars-RTG/portfolio/blob/main/case-studies/detailer-system.md" target="_blank">
+        <div class="card-icon">🧹</div>
+        <span class="card-badge green">Production</span>
+        <div class="card-title">Detailer System</div>
+        <div class="card-desc">React 19 + Socket.io real-time QA workflow for the garage floor. 14-point checklist, manager review queue, live dispatch visibility. Tablet-first PWA.</div>
+        <div class="card-metrics">
+          <span class="metric-pill">📡 Real-time vehicle readiness</span>
+        </div>
+        <div class="card-arrow">Read case study →</div>
+      </a>
+
+      <a class="card" href="https://github.com/jzimdars-RTG/portfolio/blob/main/case-studies/driver-recruitment.md" target="_blank">
+        <div class="card-icon">🚌</div>
+        <span class="card-badge green">Live</span>
+        <div class="card-title">Driver Recruitment Site</div>
+        <div class="card-desc">Attribution stack built for the recruiting team in a day. UTM/GA4 instrumentation across Indeed, ZipRecruiter, LinkedIn, and Facebook. charterbusdrivers.com.</div>
+        <div class="card-metrics">
+          <span class="metric-pill">📊 Cost-per-applicant by channel</span>
+        </div>
+        <div class="card-arrow">Read case study →</div>
+      </a>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <p class="section-label">Experience</p>
+    <h2 class="section-heading">How I got here</h2>
+    <p class="section-sub">Started as an EA. Ended up running S&amp;O.</p>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Nov 2024 – Present</div>
+        <div class="timeline-role">Business Systems Specialist &amp; EA to the CEO/CFO</div>
+        <div class="timeline-company">Golden Limousine International · Ann Arbor, MI</div>
+        <div class="timeline-body">
+          Joined as EA. Found a 35-year-old company still pricing out of Excel across 100+ markets. Rebuilt the entire strategy &amp; operations stack: unified pricing model, AI-assisted quoting platform, pricing API, real-time fleet tracking, detailing QA system, executive reporting cadence, and cross-functional governance framework.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">May – Aug 2022</div>
+        <div class="timeline-role">Research Assistant</div>
+        <div class="timeline-company">University of Michigan, Institute for Social Research · Ann Arbor, MI</div>
+        <div class="timeline-body">
+          Synthesized international health-policy datasets into briefings for senior researchers. Produced quantitative and qualitative analyses presented at academic forums.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2021 – 2024</div>
+        <div class="timeline-role">Server (top-of-floor)</div>
+        <div class="timeline-company">Barton Hills Country Club &amp; Palio Restaurant · Ann Arbor, MI</div>
+        <div class="timeline-body">
+          Consultative sales performer in high-touch hospitality. Built repeat clientele. Learned that the customer relationship is the product.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">May 2024</div>
+        <div class="timeline-role">B.A., Sociology of Health and Medicine</div>
+        <div class="timeline-company">University of Michigan · Ann Arbor, MI · Michigan Club Lacrosse (2 yrs)</div>
+        <div class="timeline-body"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <p class="section-label">Skills</p>
+    <h2 class="section-heading">What I work with</h2>
+    <p class="section-sub">Self-taught, AI-accelerated, production-focused.</p>
+
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-label">Strategy &amp; Ops</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Pricing strategy</span>
+          <span class="skill-tag">Unit economics</span>
+          <span class="skill-tag">Process design</span>
+          <span class="skill-tag">Change management</span>
+          <span class="skill-tag">Product roadmapping</span>
+          <span class="skill-tag">Exec communication</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">AI &amp; Agent Tooling</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Kimi K2</span>
+          <span class="skill-tag">GPT-4</span>
+          <span class="skill-tag">Claude</span>
+          <span class="skill-tag">GitHub Copilot</span>
+          <span class="skill-tag">Azure AI Inference</span>
+          <span class="skill-tag">Agentic workflows</span>
+          <span class="skill-tag">LLM evaluation</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Engineering</div>
+        <div class="skill-tags">
+          <span class="skill-tag">C# / .NET 8</span>
+          <span class="skill-tag">JavaScript / Node</span>
+          <span class="skill-tag">React 19</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Socket.io</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">PowerShell</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Azure</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Azure SQL</span>
+          <span class="skill-tag">Azure Functions</span>
+          <span class="skill-tag">Static Web Apps</span>
+          <span class="skill-tag">Azure Maps</span>
+          <span class="skill-tag">AI Inference</span>
+          <span class="skill-tag">Cosmos DB</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Analytics</div>
+        <div class="skill-tags">
+          <span class="skill-tag">GA4</span>
+          <span class="skill-tag">UTM attribution</span>
+          <span class="skill-tag">pandas</span>
+          <span class="skill-tag">Excel modeling</span>
+          <span class="skill-tag">A/B testing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- CONTACT -->
+  <div class="contact-strip" id="contact">
+    <h2>Let's talk</h2>
+    <p>Open to Strategy &amp; Operations roles — Google, Stripe, HubSpot, and similar. Ann Arbor, Mountain View, NYC, Chicago.</p>
+    <div class="contact-links">
+      <a href="mailto:jzimdars@umich.edu" class="btn btn-primary">jzimdars@umich.edu</a>
+      <a href="https://linkedin.com/in/joshua-zimdars-1321a624b" class="btn btn-ghost" target="_blank">LinkedIn</a>
+      <a href="https://github.com/jzimdars-RTG/portfolio" class="btn btn-ghost" target="_blank">GitHub Portfolio</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Built by Joshua Zimdars · Ann Arbor, MI · 2026</p>
+  </footer>
+
+  <script>
+    // Nav scroll state
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Intersection observer for scroll-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // stagger children of cards-grid and skills-grid
+          const parent = entry.target.closest('.cards-grid, .skills-grid');
+          if (parent) {
+            const siblings = Array.from(parent.children);
+            const idx = siblings.indexOf(entry.target);
+            entry.target.style.transitionDelay = `${idx * 80}ms`;
+          }
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.card, .timeline-item, .skill-group').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
