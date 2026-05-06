@@ -1,6 +1,6 @@
 # Joshua Zimdars
 Ann Arbor, MI · 734-730-9150 · jzimdars@umich.edu  
-[linkedin.com/in/joshua-zimdars-1321a624b](https://linkedin.com/in/joshua-zimdars-1321a624b) · [github.com/jzimdars-RTG](https://github.com/jzimdars-RTG)
+[linkedin.com/in/joshua-zimdars-1321a624b](https://linkedin.com/in/joshua-zimdars-1321a624b) · [jzimdars-rtg.github.io/portfolio](https://jzimdars-rtg.github.io/portfolio)
 
 
 I turn ambiguous business problems into shipped systems. Over the last 18 months, I've effectively run strategy and operations for the CEO and CFO of a multi-state ground-transportation company — rebuilding the way it prices, sells, hires, and serves customers from spreadsheets into a portfolio of data-driven platforms that have saved **2,800+ hours a year** and recovered margin across **100+ markets**. I am a **self-taught engineer** who learned to build production systems using AI as my primary accelerator — GitHub Copilot, Claude, GPT-4, and Azure AI Inference are daily tools, not novelties. I design prompts, build LLM-powered workflows, and evaluate AI output the same way I evaluate any other system component. I can move from executive reporting to acquisition analytics to SQL to stakeholder alignment without losing momentum.
@@ -54,7 +54,7 @@ Synthesized international health-policy datasets into briefings for senior resea
 
 ---
 
-## Selected Projects · [github.com/jzimdars-RTG/portfolio](https://github.com/jzimdars-RTG/portfolio)
+## Selected Projects · [jzimdars-rtg.github.io/portfolio](https://jzimdars-rtg.github.io/portfolio)
 
 - **Quote Calculator** *(in active development)* — production AI-assisted quoting & dispatch platform; 14 trip types, 14 vehicle classes, Azure AI / Kimi K2 email parser, QuoteBot + Samsara + Azure Maps integration, Playwright suite.
 - **Pricing API** — .NET 8 / EF Core / Azure SQL platform; 9 controllers, 22 entities, 10-phase roadmap.
