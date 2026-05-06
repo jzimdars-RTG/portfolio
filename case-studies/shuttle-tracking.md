@@ -27,3 +27,11 @@ The U-M Hospital shuttle is a critical service for patients, employees, and visi
 | Monthly active riders | — | **5,000+** |
 | Customer status inquiries | baseline | **−40%** |
 | Dispatch hours saved | — | **1,095/year** |
+
+## Why this matters for S&O roles
+
+This project demonstrates the S&O motion in its simplest form: identify the real cost of a broken process, design the minimum intervention that fixes it, instrument it, and measure the result.
+
+- **"Draw interpretable insights from sophisticated business analyses."** The 40% inquiry drop and 1,095 dispatch hours saved aren't estimates — they're measured from Samsara telemetry and dispatch log data. The number is defensible because I built the measurement layer first.
+- **"Design processes, tools, and operating cadences."** The decision to make this public-by-design (no login, no install) is an operating cadence choice, not a technical one. Friction at the access point would have killed adoption and left the dispatch problem unsolved.
+- **"Develop comprehensive strategies that solve complex business challenges."** The U-M Hospital account is the company's largest. A degraded rider experience is a contract-renewal risk. This tool is a retention strategy as much as an ops improvement.

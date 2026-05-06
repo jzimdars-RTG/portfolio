@@ -1,39 +1,38 @@
 # Building the Attribution Stack Our Recruiter Needed
-### One-day build that saved the company an outside-vendor bill — UTM attribution, GA4 events, and one campaign URL per channel per position
+### One-day build that gave the recruiting and marketing team a professional tool — without paying an agency to do it
 
 **Author:** Joshua Zimdars · Business Systems Specialist & EA to the CEO/CFO, Golden Limousine International  
-**Status:** Live · charterbusdrivers.com, busdriveropportunities.com  
+**Status:** Live · charterbusdrivers.com  
 **Stack:** Vanilla JS/CSS, GA4, UTM tracking, GitHub Pages
 
 ---
 
 ## TL;DR
-The team needed a professional CDL driver recruitment site and attribution stack — the kind of thing a marketing agency would charge $8–15K to build. I shipped it in a day: two domains, four position types, two markets, full UTM-based source attribution, GA4 event tracking, and per-channel campaign URLs for Indeed, ZipRecruiter, LinkedIn, and Facebook. The recruiter and marketing person got the tool they needed. Leadership got cost-per-applicant visibility by source for the first time. Zero vendor cost.
+Golden Limo has a recruiter and a marketing person. What they didn't have was a proper landing page and attribution stack for CDL driver hiring — the kind of thing an agency would charge $8–15K to build and six weeks to deliver. I shipped it in a day: one domain, four position types, two markets, full UTM-based source attribution, GA4 event tracking, and per-channel campaign URLs for Indeed, ZipRecruiter, LinkedIn, and Facebook. The team got a professional tool immediately. Leadership got cost-per-applicant visibility by source for the first time. No vendor, no delay.
 
 ---
 
 ## The Problem
 
-Ground transportation has a structural hiring problem: every regional operator is fishing in the same shallow pool of CDL holders, and the major job boards (Indeed and ZipRecruiter) get the lion's share of applications but also charge per click. Without attribution, you can't tell which channel is producing actual hires versus tire-kickers. Golden Limo had been spending across all the major boards and *guessing.*
+Ground transportation has a structural hiring problem: every regional operator is fishing in the same shallow pool of CDL holders, and the major job boards (Indeed and ZipRecruiter) charge per click. Without proper attribution, you can't tell which channel is producing actual hires versus tire-kickers — so budget gets spread across everything and nothing gets optimized. Golden Limo had a recruiter, a marketing person, and an active hiring budget. What they were missing was a purpose-built page with a proper instrumentation layer underneath it.
 
 Constraints:
-- No marketing budget worth naming.
-- No recruiter.
-- Four position types, two markets, multiple shift profiles.
+- Four position types across two markets (Detroit and Ann Arbor), each with different shift profiles.
 - Whatever I built had to load instantly on a phone — most CDL applicants apply from a parking lot on a break.
+- The recruiter and marketing team needed to own the results, not interpret a spreadsheet.
 
 ## The Approach
 
-Three bets:
+Two bets:
 
 ### Bet 1 — Instrument before spending another dollar
-The cheap intervention was attribution, not creative. I built a single landing page, then layered on a complete UTM taxonomy (`utm_source`, `utm_medium`, `utm_campaign`, plus `position` and `keyword` for finer-grained routing). Every channel got its own URL. Every campaign got its own URL.
+The cheap intervention was attribution, not creative. I built a single landing page, then layered on a complete UTM taxonomy (`utm_source`, `utm_medium`, `utm_campaign`, plus `utm_content` for position-level routing). Every channel got its own URL. Every campaign got its own URL.
 
 ```
-charterbusdrivers.com?source=indeed&campaign=q1-2025&position=charter
-charterbusdrivers.com?source=ziprecruiter&campaign=q1-2025&position=cdl
-busdriveropportunities.com?source=linkedin&campaign=professional&position=executive
-busdriveropportunities.com?source=facebook&campaign=social-q1&position=shuttle
+charterbusdrivers.com?utm_source=indeed&utm_medium=paid&utm_campaign=q1-2025&utm_content=charter
+charterbusdrivers.com?utm_source=ziprecruiter&utm_medium=paid&utm_campaign=q1-2025&utm_content=cdl
+charterbusdrivers.com?utm_source=linkedin&utm_medium=paid&utm_campaign=professional&utm_content=executive
+charterbusdrivers.com?utm_source=facebook&utm_medium=paid&utm_campaign=social-q1&utm_content=shuttle
 ```
 
 The page captures source on landing, persists it, and forwards it through to the apply CTA so leadership can attribute *applications* (not just clicks) back to the channel that produced them.
@@ -49,9 +48,6 @@ I defined the event schema before writing any tracking code:
 - `time_on_page`
 
 That gives me a five-step funnel in GA4 (visit → scroll → engage → apply-click → phone-click) and a clean answer to "what's our drop-off?"
-
-### Bet 3 — Two domains, one playbook
-Separate `charterbusdrivers.com` and `busdriveropportunities.com` lets us A/B test domain-level positioning (charter-bus vs. broader bus-driver framing) without changing the underlying page. Same site, two front doors, attribution disambiguated.
 
 ## What I'd Do Differently
 
@@ -69,6 +65,6 @@ Separate `charterbusdrivers.com` and `busdriveropportunities.com` lets us A/B te
 | Mobile load | sub-second (vanilla JS, no framework) |
 | Channels with attribution | Indeed, ZipRecruiter, LinkedIn, Facebook, organic |
 
-## Why this matters for GCS
+## Why this matters for S&O roles
 
 This is the exact problem GCS Account Strategists solve for SMBs every day: an owner who knows they have a hiring/sales problem, who's spending money across channels, and who can't tell which channel is working. The answer is always the same — instrument the funnel, attribute the conversion, double down on what's working. I've now lived through that loop on the SMB side. I know what's hard about it (getting the *business* to trust the numbers, not the technology of capturing them).

@@ -10,16 +10,17 @@
 ---
 
 ## TL;DR
-Golden Limousine quoted ground-transportation jobs by hand from a static rate card in Excel. Sales response averaged 20–34 minutes per quote. I'm designing and shipping the **Quote Calculator**, a production platform that AI-parses a customer email, prices the trip across 14 trip types and 14 vehicle classes against a demand-aware rate card, validates with the dispatch system, and books the job. Median quote time is now under 3 minutes; the platform is the daily tool for sales and dispatch.
+Pricing knowledge at Golden Limo was scattered across a dozen people, tribal memory, and spreadsheets no one fully owned. No two reservationists priced the same trip the same way. I interviewed every stakeholder, unified the logic, and built the company's first complete pricing model — starting in Excel to prove it worked, then shipping it as a production AI platform. The **Quote Calculator** AI-parses a customer email, prices any trip instantly across 14 trip types and 14 vehicle classes, validates with dispatch, and books the job. Median quote time: under 3 minutes, down from 20–34. Reservationists stopped doing pricing math and started focusing on the customer.
 
 ---
 
 ## The Problem
 
-Three things were true at once:
-1. **Sales was a bottleneck.** Median time-to-quote: 20–34 minutes per request, in a category where customers are shopping three vendors at once.
-2. **Pricing was inconsistent across reps.** Same trip, different price.
-3. **The highest-revenue category — multi-day charter — was priced on intuition** with no DOT compliance check, no demand model, no margin discipline.
+Four things were true at once:
+1. **Pricing knowledge lived in people, not systems.** Every experienced reservationist had their own rules; every new hire was a liability.
+2. **Sales was a bottleneck.** Median time-to-quote: 20–34 minutes per request, in a category where customers are shopping three vendors at once.
+3. **Pricing was inconsistent across reps.** Same trip, different price.
+4. **The highest-revenue category — multi-day charter — was priced on intuition** with no DOT compliance check, no demand model, no margin discipline.
 
 ## The Approach
 
@@ -73,6 +74,12 @@ Notable design choices: no build step, vanilla ES modules, single-file Node prox
 
 The 10-phase rollout plan is documented and tracked.
 
-## Why this matters for GCS
+## Why this matters for S&O roles
 
-This is a small-business version of what GCS does at Google scale: take a fragmented sales process, encode pricing and product logic into a system, instrument it, and use the data to advise the business. The skills are the same — diagnose the real bottleneck, sequence the work, manage change, write the executive narrative. The only thing that changes at Google is the zeros.
+This project maps to every responsibility in the GCS S&O job description:
+
+- **"Draw interpretable insights from sophisticated business analyses."** The demand calendar and 7-zone pricing model are the analysis layer. Every quote is priced against a model I can defend number by number to an executive.
+- **"Design processes, tools, and operating cadences."** The Quote Calculator *is* the process redesign. It replaced a tribal, ad-hoc quoting workflow with a structured, auditable operating cadence.
+- **"Develop comprehensive business strategies that solve complex challenges."** Structured discovery across every function → unified model → phased platform rollout. That's the strategy sequence, not just a feature ship.
+- **"Communicate data-driven recommendations to leadership."** The demand calendar feeds the CEO's weekly forecast. The pricing model is the source of every revenue conversation the executive team has.
+- **"Define actionable plans and align cross-functional stakeholders."** The 10-phase roadmap is a gated product plan. The change-management work — sitting next to dispatchers until adoption happened — is the stakeholder alignment story.

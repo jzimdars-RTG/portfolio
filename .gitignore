@@ -1,2 +1,5 @@
 .DS_Store
 Thumbs.db
+
+# Cover letters — kept locally only, not published to public repo
+cover-letters/

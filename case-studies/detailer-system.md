@@ -28,3 +28,9 @@ The detailing bay was the operational blind spot of the company. Three groups ha
 
 ## Result
 Dispatch can now answer "is the Sprinter ready?" without walking to the bay. Manager review caught quality issues before vehicles went out. The system is the daily tool for the garage floor.
+
+## Why this matters for S&O roles
+
+- **"Design processes, tools, and operating cadences."** The one-screen-per-role design is an operating cadence decision: same data, three lenses, zero ambiguity about what each person is supposed to do with it. That's process design, not UI design.
+- **"Define actionable plans and align cross-functional stakeholders."** Three groups (detailers, managers, dispatch) had three different versions of the same problem. The system only works if all three adopt it. Shipping before validating with a manager — and having to change two things on day one — is the real lesson: stakeholder alignment has to happen before launch, not after.
+- **"Communicate data-driven recommendations to leadership."** Before this system, vehicle readiness was anecdote. Now it’s a timestamped audit trail. That data feeds the conversation about staffing, shift structure, and vehicle rotation — decisions the CEO and ops manager make every week.

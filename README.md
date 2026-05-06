@@ -35,6 +35,6 @@ Looking for Strategy & Operations roles where the work touches both the data and
 
 ---
 
-📄 [Resume](resume/joshua-zimdars-resume.md) · 📨 [Cover Letter](cover-letters/google-gcs-sales-strategy-ops.md)
+
 
 *Outside of work: U-M ’24, lifelong sports guy, sci-fi & fantasy reader, building all of this for my family.*
