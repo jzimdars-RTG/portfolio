@@ -30,12 +30,6 @@ This portfolio is a curated read of that work. It spans two surfaces: **producti
 - **Adoption beats elegance.** A clever system nobody uses is worse than a clunky one everyone does.
 - **Instrument before automating.** You can't improve what you can't measure.
 
-## Currently
 
 Open to two role shapes where the work sits between AI engineering and the customer: **Generative AI Forward Deployed Engineer** (Google Cloud, Anthropic, OpenAI solutions teams) and **Strategy & Operations** roles that touch product and data. Based in Ann Arbor, MI.
 
----
-
-
-
-*Outside of work: U-M ’24, lifelong sports guy, sci-fi & fantasy reader, building all of this for my family.*
