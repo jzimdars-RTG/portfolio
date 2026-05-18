@@ -3,7 +3,7 @@ Ann Arbor, MI · 734-730-9150 · jzimdars@umich.edu
 [linkedin.com/in/joshua-zimdars-1321a624b](https://linkedin.com/in/joshua-zimdars-1321a624b) · [jzimdars-rtg.github.io/portfolio](https://jzimdars-rtg.github.io/portfolio)
 
 
-I build practical AI-enabled systems and help teams adopt them quickly. Over the last 18 months, I have led early-stage product development, rapid prototyping, and internal systems innovation inside a multi-state transportation business—turning ambiguous operational problems into production tools used daily by sales, dispatch, and leadership. My work spans generative AI workflows, internal enablement, stakeholder-facing problem solving, and full-stack engineering across React, Node, .NET, Azure, SQL, and Python.
+I build practical AI-enabled systems and help teams adopt them quickly. Over the last 18 months, I have led early-stage product development, rapid prototyping, and internal systems innovation inside a multi-state transportation business—turning ambiguous operational problems into production tools used daily by sales, dispatch, and leadership. My work spans generative AI workflows, internal enablement, stakeholder-facing problem solving, and full-stack engineering across React, Node, .NET, Azure, SQL, and Python. My recent work focuses on production agentic LLM workflows — multi-provider model orchestration (Vertex AI Gemini + Azure AI), LangGraph multi-agent graphs with ReAct + self-reflection, and LLM-native observability (per-call tokens, cost, latency, tracing) — built first as open-source infrastructure on my personal account, then deployed into live customer operations.
 
 ---
 
@@ -20,10 +20,11 @@ Joined in an executive support role and grew into a forward-deployed systems bui
 - Rapidly prototype and ship internal tools that move from ambiguous business need to production use, combining LLM workflows, custom software, and operational feedback loops.
 - Lead early-stage incubation of internal products by validating problems with stakeholders, defining scope, building working prototypes, and iterating toward systems teams will actually adopt.
 - Teach colleagues how to use emerging tools and patterns effectively, including AI-assisted development, prompt iteration, workflow design, and lightweight automation.
+- Authored <a href="https://github.com/jzimdars19/jz-genai-agent-toolkit">`jz-genai-agent-toolkit`</a>, a personal open-source agentic LLM toolkit (Vertex AI + LangGraph.js + LLM observability) that the Golden Limo production stack now consumes as the generic core — separating reusable AI infrastructure from company-specific integrations.
 
 **Sales operations, pricing systems, and engineering**
 - Diagnosed why a company quoting work across 100+ markets was still relying on fragmented spreadsheets and tribal pricing knowledge; designed and operationalized a structured pricing framework that standardized quoting logic across reservationists.
-- Took that unified pricing model and shipped it as the **Quote Calculator** *(in active development, in daily use by sales/dispatch)*: a production platform that AI-parses inbound customer emails, structures quote requirements, and supports faster, more consistent quoting workflows.
+- Designed and shipped the **Quote Calculator** *(in active daily use by sales/dispatch)*: a production agentic LLM workflow that parses inbound customer emails with Gemini 2.0 Flash on **Vertex AI** (with Azure AI Kimi K2 as a swappable second provider), routes through a **LangGraph** state graph (parse → self-reflect → enrich with Azure Maps → price across 14 trip types × 14 vehicles → validate with QuoteBot → human-approval gate → dispatch booking), and emits per-call telemetry (tokens, cost, latency, p50/p95) to a JSONL trace pipeline. Median time-to-quote dropped from 20–34 min to **2–3 min**; pricing variance across reps eliminated.
 - Re-platformed the rate card into a **.NET 8 / EF Core / Azure SQL pricing API** *(9 controllers, 22 entities)* with a **10-phase product roadmap** I authored and own, creating a reusable foundation for quoting, dispatch, and future internal and customer-facing applications.
 
 **Operations tooling & customer experience**
@@ -73,9 +74,9 @@ Synthesized international health-policy datasets into briefings for senior resea
 ## Skills
 
 **AI enablement & rapid prototyping** — generative AI workflows, prompt engineering, AI tool evaluation, AI-assisted development, internal training, prototyping from concept to code, workflow design, technical instruction  
-**AI platforms & tools** — OpenAI, Claude, Gemini, Kimi K2, GitHub Copilot, Azure AI Inference  
+**AI platforms & tools** — Google Vertex AI (Gemini 2.0 Flash), Azure AI Inference (Kimi K2), OpenAI, Claude, GitHub Copilot · **Agentic frameworks**: LangGraph.js (ReAct, self-reflection, human-in-the-loop) · **LLM observability**: token/cost/latency tracing, JSONL trace pipelines, eval harnesses  
 **Strategy & operations** — structured problem solving, pricing strategy, unit economics, stakeholder alignment, change management, process and tooling design, governance cadence development  
 **Data & analytics** — SQL, Python (pandas), Excel modeling, analytics framing, dashboarding, data visualization  
-**Engineering** — JavaScript (Node, React 19), C# / .NET 8, Python, VBA, PowerShell, REST APIs, Socket.io, Azure (Functions, Static Web Apps, SQL, Maps, AI Inference, Cosmos), CI/CD, Git  
+**Engineering** — JavaScript (Node, React 19), C# / .NET 8, Python, VBA, PowerShell, REST APIs, Socket.io, Google Cloud Platform (Vertex AI), Azure (Functions, Static Web Apps, SQL, Maps, AI Inference, Cosmos), CI/CD, Git  
 **Marketing analytics** — GA4, UTM attribution, conversion optimization, A/B testing, campaign measurement  
 **Certifications** — MaintainX Administrator Foundations (2025) · Deloitte Future of Work Institute (2023)

@@ -3,7 +3,7 @@
 
 **Author:** Joshua Zimdars · Business Systems Specialist & EA to the CEO/CFO, Golden Limousine International  
 **Status:** ⚒️ **In active development** · Already in daily use by sales and dispatch  
-**Stack:** Vanilla JS (ES modules), Node.js proxy, Azure AI Inference (Kimi K2), Azure Maps, QuoteBot API, Samsara API, Playwright
+**Stack:** Vanilla JS (ES modules), Node.js proxy, **Google Vertex AI (Gemini 2.0 Flash)** + Azure AI Inference (Kimi K2) — swappable backends, **LangGraph.js** (multi-agent graph with ReAct + self-reflection), **LLM-native observability** (tokens, cost, latency, JSONL tracing), Azure Maps, QuoteBot API, Samsara API, Playwright. Generic agentic core lives in <a href="https://github.com/jzimdars19/jz-genai-agent-toolkit">`jz-genai-agent-toolkit`</a>; this repo consumes it via git subtree.
 
 > **Note:** This is a living system. Features ship weekly. Metrics below reflect the current state — they will move as new pricing categories, integrations, and AI capabilities come online.
 
@@ -73,12 +73,12 @@ Notable design choices: no build step, vanilla ES modules, single-file Node prox
 
 The 10-phase rollout plan is documented and tracked.
 
-## Why this matters for S&O roles
+## Why this matters for Generative AI Forward Deployed Engineer roles
 
-This project maps to every responsibility in the GCS S&O job description:
+This project maps to every responsibility in the Google Cloud GenAI FDE job description:
 
-- **"Draw interpretable insights from sophisticated business analyses."** The demand calendar and 7-zone pricing model are the analysis layer. Every quote is priced against a model I can defend number by number to an executive.
-- **"Design processes, tools, and operating cadences."** The Quote Calculator *is* the process redesign. It replaced a tribal, ad-hoc quoting workflow with a structured, auditable operating cadence.
-- **"Develop comprehensive business strategies that solve complex challenges."** Structured discovery across every function → unified model → phased platform rollout. That's the strategy sequence, not just a feature ship.
-- **"Communicate data-driven recommendations to leadership."** The demand calendar feeds the CEO's weekly forecast. The pricing model is the source of every revenue conversation the executive team has.
-- **"Define actionable plans and align cross-functional stakeholders."** The 10-phase roadmap is a gated product plan. The change-management work — sitting next to dispatchers until adoption happened — is the stakeholder alignment story.
+- **"Transition from rapid prototypes to production-grade agentic workflows (e.g., multi-agent systems, MCP servers)."** The Quote Calculator went from a Kimi-only single-shot parser to a full LangGraph state graph with ReAct retry, self-reflection, and a human-approval node — all running against live customer emails in daily production use.
+- **"Architect the 'connective tissue' linking Google's AI products to customers' live infrastructure, including APIs, legacy data silos, and security perimeters."** Vertex AI Gemini → Node proxy → QuoteBot (legacy dispatch API) → Samsara (fleet telematics) → Azure Maps. Credential rotation handled via per-request `.env` re-read; path-traversal-safe static layer; no API keys ever ship to the browser.
+- **"Build high-performance evaluation pipelines and observability frameworks to ensure agentic systems meet requirements for accuracy, safety, and latency."** Playwright parser eval suite (12 scenarios × 14 trip types), synthetic batch validator (`fake-quotes-test.js`), and a JSONL telemetry pipeline capturing tokens, cost, latency, p50/p95, and error rate per backend and per operation. A live in-browser agent-trace overlay visualizes every node firing in real time.
+- **"Identify recurring field patterns and friction points across Google's AI stack, converting them into reusable modules."** The generic agentic core was extracted into [`jz-genai-agent-toolkit`](https://github.com/jzimdars19/jz-genai-agent-toolkit) as a portable, vendor-agnostic library — exactly the "field insight → reusable module → formal product feature request" loop the JD describes.
+- **"Collaborate with customer engineering teams to instill development best practices."** Six weeks of sitting next to dispatchers until they preferred the new workflow. Versioned `config.js` so any historical quote can be replayed against the rate card that was live the day it was given. Documented 10-phase roadmap, gated rollout.

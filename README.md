@@ -5,7 +5,7 @@ Ann Arbor, MI · [LinkedIn](https://linkedin.com/in/joshua-zimdars-1321a624b) ·
 
 I turn ambiguous business problems into shipped systems. Over 18 months at a 35-year-old ground-transportation SMB, I've built the strategy & operations function from scratch — pricing, sales ops, paid acquisition, executive reporting, and the tools that make all of it work. I'm a **self-taught engineer** who learned to build production systems using AI as my primary accelerator (GitHub Copilot, Claude, GPT-4, Azure AI Inference). Designing prompts, building agentic workflows, and evaluating LLM output is part of my daily toolkit, not a side interest.
 
-This portfolio is a curated read of that work. The corresponding code lives in private Golden Limousine repositories; what you'll find here is the design narrative, the metrics, and what I'd do differently.
+This portfolio is a curated read of that work. It spans two surfaces: **production systems shipped at Golden Limousine** (operator-facing tools, the AI-assisted quote engine, the pricing API) and **open-source AI engineering work on my personal account** (<a href="https://github.com/jzimdars19/jz-genai-agent-toolkit">`jz-genai-agent-toolkit`</a>) — the generic, vendor-agnostic agentic core that the Golden Limo platform now consumes.
 
 ---
 
@@ -14,6 +14,7 @@ This portfolio is a curated read of that work. The corresponding code lives in p
 | Project | One-liner | Read | PDF |
 |---|---|---|---|
 | 🤖 **Quote Calculator** *(in active dev)* | AI-assisted pricing & dispatch platform — 14 trip types × 14 vehicles, 10x faster sales response | [→](case-studies/quote-calculator.md) | [PDF](pdfs/quote-calculator.pdf) |
+| 🧠 **GenAI Agent Toolkit** *(personal)* | Portable LangGraph + Vertex AI Gemini agentic core with LLM-native observability (tokens, cost, latency, tracing) | [→](case-studies/genai-agent-toolkit.md) | [PDF](pdfs/genai-agent-toolkit.pdf) |
 | 🏗️ **Pricing API (.NET 8)** | Re-platforming the rate card from Excel/VBA onto Azure SQL with a 10-phase product roadmap | [→](case-studies/pricing-api.md) | [PDF](pdfs/pricing-api.pdf) |
 | 🚐 **Shuttle Tracking PWA** | Real-time map for 5K+ monthly U-M Hospital riders | [→](case-studies/shuttle-tracking.md) | [PDF](pdfs/shuttle-tracking.pdf) |
 | 🧹 **Detailer System** | Real-time React 19 + Socket.io QA workflow for the garage floor | [→](case-studies/detailer-system.md) | [PDF](pdfs/detailer-system.pdf) |
@@ -30,4 +31,5 @@ This portfolio is a curated read of that work. The corresponding code lives in p
 - **Instrument before automating.** You can't improve what you can't measure.
 
 
+Open to two role shapes where the work sits between AI engineering and the customer: **Generative AI Forward Deployed Engineer** (Google Cloud, Anthropic, OpenAI solutions teams) and **Strategy & Operations** roles that touch product and data. Based in Ann Arbor, MI.
 
