@@ -29,9 +29,6 @@ This portfolio is a curated read of that work. The corresponding code lives in p
 - **Adoption beats elegance.** A clever system nobody uses is worse than a clunky one everyone does.
 - **Instrument before automating.** You can't improve what you can't measure.
 
-## Currently
-
-Looking for Strategy & Operations roles where the work touches both the data and the customer — Google Customer Solutions, Stripe, HubSpot, and similar. Based in Ann Arbor, MI.
 
 ---
 
