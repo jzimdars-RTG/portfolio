@@ -30,8 +30,4 @@ This portfolio is a curated read of that work. The corresponding code lives in p
 - **Instrument before automating.** You can't improve what you can't measure.
 
 
----
 
-
-
-*Outside of work: U-M ’24, lifelong sports guy, sci-fi & fantasy reader, building all of this for my family.*
