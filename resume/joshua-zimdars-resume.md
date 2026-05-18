@@ -3,7 +3,7 @@ Ann Arbor, MI · 734-730-9150 · jzimdars@umich.edu
 [linkedin.com/in/joshua-zimdars-1321a624b](https://linkedin.com/in/joshua-zimdars-1321a624b) · [jzimdars-rtg.github.io/portfolio](https://jzimdars-rtg.github.io/portfolio)
 
 
-I build practical AI-enabled systems and help teams adopt them quickly. Over the last 18 months, I have led early-stage product development, rapid prototyping, and internal systems innovation inside a multi-state transportation business—turning ambiguous operational problems into production tools used daily by sales, dispatch, and leadership. My work spans generative AI workflows, internal enablement, stakeholder-facing problem solving, and full-stack engineering across React, Node, .NET, Azure, SQL, and Python. My recent work focuses on production agentic LLM workflows — multi-provider model orchestration (Vertex AI Gemini + Azure AI), LangGraph multi-agent graphs with ReAct + self-reflection, and LLM-native observability (per-call tokens, cost, latency, tracing) — built first as open-source infrastructure on my personal account, then deployed into live customer operations.
+I build and ship production AI systems and help teams adopt them. Over 18 months embedded at a 35-year-old SMB, I've functioned as a forward-deployed builder: identifying production blockers, shipping agentic workflows against live customer infrastructure, and converting field-observed friction into reusable systems. I write production code in JavaScript and Python, deploy on GCP and Azure, and treat observability as a design requirement — not an afterthought.
 
 ---
 
@@ -13,34 +13,25 @@ I build practical AI-enabled systems and help teams adopt them quickly. Over the
 **Business Systems Specialist & Executive Assistant to the CEO and CFO**  
 *Nov 2024 – Present*
 
-Joined in an executive support role and grew into a forward-deployed systems builder across pricing, operations, and customer experience. I identify high-friction workflows, prototype solutions rapidly, align stakeholders around adoption, and ship systems that improve execution across teams.
+Embedded builder across pricing, operations, and customer experience at a 100-market ground transportation SMB. Identify high-friction workflows, prototype solutions rapidly, and ship production systems against live infrastructure — including APIs, legacy data, and non-technical operator workflows.
 
-**AI enablement, prototyping, and internal product development**
-- Introduce practical AI-assisted workflows for executives, sales, dispatch, and operations teams, helping non-technical stakeholders adopt better ways to solve problems, prototype solutions, and execute faster.
-- Rapidly prototype and ship internal tools that move from ambiguous business need to production use, combining LLM workflows, custom software, and operational feedback loops.
-- Lead early-stage incubation of internal products by validating problems with stakeholders, defining scope, building working prototypes, and iterating toward systems teams will actually adopt.
-- Teach colleagues how to use emerging tools and patterns effectively, including AI-assisted development, prompt iteration, workflow design, and lightweight automation.
-- Authored <a href="https://github.com/jzimdars19/jz-genai-agent-toolkit">`jz-genai-agent-toolkit`</a>, a personal open-source agentic LLM toolkit (Vertex AI + LangGraph.js + LLM observability) that the Golden Limo production stack now consumes as the generic core — separating reusable AI infrastructure from company-specific integrations.
+**AI systems, agentic workflows, and production deployment**
+- Designed and shipped the **Quote Calculator** *(in active daily use by sales and dispatch)*: a production agentic LLM workflow that parses inbound customer emails with Gemini 2.0 Flash on **Vertex AI (GCP)**, populates a pricing engine across 14 trip types × 14 vehicles, and routes through a LangGraph multi-agent graph with ReAct and self-reflection. Cut median time-to-quote from 20–34 minutes to **2–3 minutes**.
+- Built and maintain **`jz-genai-agent-toolkit`** ([github.com/jzimdars-RTG/JZ-genai-](https://github.com/jzimdars-RTG/JZ-genai-)): an open-source vendor-agnostic agentic core in **JavaScript (LangGraph.js)** and **Python (LangGraph + langchain-google-vertexai)**. Features: multi-provider LLM routing (Vertex AI / Azure AI), self-reflection loop, **RAG retrieval** (cosine similarity over Vertex AI `text-embedding-004`), human-in-the-loop gate, and per-call **LLM-native observability** (tokens, cost, latency, p50/p95) emitted as JSONL.
+- Instrumented a Playwright-based **LLM eval pipeline** across 12 parser scenarios after discovering the model was reliably wrong on multi-leg itineraries; re-prompting against eval output raised accuracy to production standard.
+- Introduced AI-assisted workflows and prompt engineering practices for executives, sales, dispatch, and operations teams; led hands-on adoption sessions until teams preferred the new systems.
 
-**Sales operations, pricing systems, and engineering**
-- Diagnosed why a company quoting work across 100+ markets was still relying on fragmented spreadsheets and tribal pricing knowledge; designed and operationalized a structured pricing framework that standardized quoting logic across reservationists.
-- Designed and shipped the **Quote Calculator** *(in active daily use by sales/dispatch)*: a production agentic LLM workflow that parses inbound customer emails with Gemini 2.0 Flash on **Vertex AI** (with Azure AI Kimi K2 as a swappable second provider), routes through a **LangGraph** state graph (parse → self-reflect → enrich with Azure Maps → price across 14 trip types × 14 vehicles → validate with QuoteBot → human-approval gate → dispatch booking), and emits per-call telemetry (tokens, cost, latency, p50/p95) to a JSONL trace pipeline. Median time-to-quote dropped from 20–34 min to **2–3 min**; pricing variance across reps eliminated.
-- Re-platformed the rate card into a **.NET 8 / EF Core / Azure SQL pricing API** *(9 controllers, 22 entities)* with a **10-phase product roadmap** I authored and own, creating a reusable foundation for quoting, dispatch, and future internal and customer-facing applications.
-
-**Operations tooling & customer experience**
-- Shipped 8 internal applications across operations, customer service, and pricing — collectively saving **2,800+ hours/year**.
+**Engineering and platform**
+- Re-platformed the rate card into a **.NET 8 / EF Core / Azure SQL pricing API** *(9 controllers, 22 entities)* with a **10-phase product roadmap**.
 - Built a **real-time vehicle-tracking PWA** for U-M Hospital shuttles *(5,000+ monthly riders)* — cut customer status inquiries **40%** and freed **1,095 dispatch hours/year**.
-- Built a **real-time vehicle detailing system** *(React 19 + Socket.io + Node)* with a 14-point QA checklist, manager review workflow, and tablet-optimized UI for the garage floor.
-- Built a passenger-analytics pipeline *(Python / pandas)* that now informs renewal conversations with the U-M Hospital account.
+- Built a **real-time vehicle detailing system** *(React 19 + Socket.io + Node)* with a 14-point QA checklist and tablet-optimized UI.
+- Built a **Python/pandas passenger-analytics pipeline** now used in account renewal conversations with U-M Hospital.
+- Shipped 8 internal applications collectively saving **2,800+ hours/year**.
 
-**Executive support, stakeholder management, and cross-functional leadership**
-- Prepare CEO/CFO weekly briefings and board-prep materials by translating operational and financial data into clear recommendations, tradeoffs, and decisions.
-- Built and own a cross-functional governance cadence aligning HR, IT, Safety, Fleet, and Operations, and lead change management for major system rollouts.
-- Cut IT support tickets **30%** by standardizing **60+ devices** under JAMF Now MDM; reduced deployment time **70%** with PowerShell CI/CD on Azure.
-- Initiated a company-wide recognition program that measurably improved retention-survey scores.
-
-**Marketing & acquisition**
-- Built a CDL driver recruitment site with full UTM/GA4 attribution for the recruiting team in a day, giving leadership clear visibility into recruiting-channel performance across Indeed, ZipRecruiter, LinkedIn, and Facebook.
+**Executive support and operations**
+- Prepare CEO/CFO weekly briefings and board-prep materials; lead cross-functional governance cadence across HR, IT, Safety, Fleet, and Operations.
+- Cut IT support tickets **30%** by standardizing **60+ devices** under JAMF MDM; reduced deployment time **70%** with PowerShell CI/CD on Azure.
+- Built a CDL driver recruitment site with full UTM/GA4 attribution in a day, giving leadership visibility into recruiting-channel performance across 4 job boards and 4 CDL roles.
 
 ---
 
@@ -63,20 +54,23 @@ Synthesized international health-policy datasets into briefings for senior resea
 
 ## Selected Projects · [jzimdars-rtg.github.io/portfolio](https://jzimdars-rtg.github.io/portfolio)
 
-- **Quote Calculator** *(in active development)* — production AI-assisted quoting and dispatch platform; uses LLM-based email parsing and structured operational logic to support faster, more consistent quote generation.
-- **Pricing API** — .NET 8 / EF Core / Azure SQL platform; 9 controllers, 22 entities, and a 10-phase roadmap supporting future internal and customer-facing tools.
-- **Shuttle Tracking PWA** — real-time vehicle map for 5K+ monthly U-M Hospital riders; reduced customer inquiry volume by 40%.
-- **Detailer System** — React 19 + Socket.io real-time QA workflow for garage-floor operations.
-- **Driver Recruitment Site** — UTM/GA4 attribution stack built for the recruiting team in a day. Live at charterbusdrivers.com.
+- **GenAI Agent Toolkit** — vendor-agnostic LangGraph agentic core in **JavaScript and Python**; multi-provider LLM routing, self-reflection, **RAG retrieval** (Vertex AI embeddings + cosine similarity), human-in-the-loop gate, LLM-native observability (tokens, cost, p50/p95 latency). [github.com/jzimdars-RTG/JZ-genai-](https://github.com/jzimdars-RTG/JZ-genai-)
+- **Quote Calculator** *(in active development)* — production AI-assisted quoting and dispatch platform; Gemini 2.0 Flash on Vertex AI, LangGraph multi-agent graph, 14 trip types × 14 vehicles, LLM eval pipeline.
+- **Pricing API** — .NET 8 / EF Core / Azure SQL; 9 controllers, 22 entities, 10-phase roadmap.
+- **Shuttle Tracking PWA** — real-time vehicle map for 5K+ monthly U-M Hospital riders; reduced inquiry volume 40%.
+- **Driver Recruitment Site** — UTM/GA4 attribution stack. Live at charterbusdrivers.com.
 
 ---
 
 ## Skills
 
-**AI enablement & rapid prototyping** — generative AI workflows, prompt engineering, AI tool evaluation, AI-assisted development, internal training, prototyping from concept to code, workflow design, technical instruction  
-**AI platforms & tools** — Google Vertex AI (Gemini 2.0 Flash), Azure AI Inference (Kimi K2), OpenAI, Claude, GitHub Copilot · **Agentic frameworks**: LangGraph.js (ReAct, self-reflection, human-in-the-loop) · **LLM observability**: token/cost/latency tracing, JSONL trace pipelines, eval harnesses  
-**Strategy & operations** — structured problem solving, pricing strategy, unit economics, stakeholder alignment, change management, process and tooling design, governance cadence development  
-**Data & analytics** — SQL, Python (pandas), Excel modeling, analytics framing, dashboarding, data visualization  
-**Engineering** — JavaScript (Node, React 19), C# / .NET 8, Python, VBA, PowerShell, REST APIs, Socket.io, Google Cloud Platform (Vertex AI), Azure (Functions, Static Web Apps, SQL, Maps, AI Inference, Cosmos), CI/CD, Git  
-**Marketing analytics** — GA4, UTM attribution, conversion optimization, A/B testing, campaign measurement  
+**AI engineering & agentic systems** — prompt engineering, Retrieval-Augmented Generation (RAG), multi-agent orchestration (ReAct, self-reflection, hierarchical delegation), LLM evaluation pipelines, human-in-the-loop workflows, agentic framework development  
+**Languages** — JavaScript (Node.js, React 19), **Python** (LangGraph, pandas, data pipelines), C# / .NET 8, PowerShell, SQL, VBA  
+**AI platforms** — Google Vertex AI (Gemini 2.0 Flash, text-embedding-004), Azure AI Inference (Kimi K2), OpenAI, Claude, GitHub Copilot  
+**Agentic frameworks** — LangGraph.js, LangGraph (Python), langchain-google-vertexai; patterns: ReAct, self-reflection, human-in-the-loop  
+**LLM-native observability** — per-call token accounting, cost-per-request, latency (p50/p95), JSONL tracing, error rate  
+**Cloud platforms** — Google Cloud Platform (Vertex AI, GCP), Azure (Functions, Static Web Apps, SQL, Maps, AI Inference, MDM/Intune)  
+**Engineering** — REST APIs, Socket.io, ES modules, .NET 8 / EF Core, PowerShell CI/CD, Playwright (LLM eval), JAMF Now MDM  
+**Data & analytics** — SQL, Python/pandas, Excel modeling, GA4, UTM attribution, dashboarding  
+**Strategy & operations** — pricing strategy, unit economics, stakeholder alignment, change management, governance cadence  
 **Certifications** — MaintainX Administrator Foundations (2025) · Deloitte Future of Work Institute (2023)
