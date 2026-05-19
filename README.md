@@ -5,7 +5,7 @@ Ann Arbor, MI · [LinkedIn](https://linkedin.com/in/joshua-zimdars-1321a624b) ·
 
 I turn ambiguous business problems into shipped systems. Over 18 months at a 35-year-old ground-transportation SMB, I've built the strategy & operations function from scratch — pricing, sales ops, paid acquisition, executive reporting, and the tools that make all of it work. I'm a **self-taught engineer** who learned to build production systems using AI as my primary accelerator (GitHub Copilot, Claude, GPT-4, Azure AI Inference). Designing prompts, building agentic workflows, and evaluating LLM output is part of my daily toolkit, not a side interest.
 
-This portfolio is a curated read of that work. It spans two surfaces: **production systems shipped at Golden Limousine** (operator-facing tools, the AI-assisted quote engine, the pricing API) and **open-source AI engineering work on my personal account** (<a href="https://github.com/jzimdars19/jz-genai-agent-toolkit">`jz-genai-agent-toolkit`</a>) — the generic, vendor-agnostic agentic core that the Golden Limo platform now consumes.
+This portfolio is a curated read of that work. It spans two surfaces: **production systems shipped at Golden Limousine** (operator-facing tools, the AI-assisted quote engine, the pricing API) and **open-source AI engineering work on my personal account** (<a href="https://github.com/jzimdars-RTG/JZ-genai-">`jz-genai-agent-toolkit`</a>) — the generic, vendor-agnostic agentic core that the Golden Limo platform now consumes.
 
 ---
 
