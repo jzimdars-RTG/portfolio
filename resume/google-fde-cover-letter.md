@@ -5,7 +5,7 @@ Joshua Zimdars · jzimdars@umich.edu · 734-730-9150
 
 I have spent the last 18 months doing exactly the job you posted.
 
-Not something adjacent to it. Not a simulation of it. The actual job — embedded inside a customer's environment, diagnosing the integration failures and data-readiness gaps that were blocking AI from working in production, writing the code to fix them, and staying until the new systems became the default behavior. I did this as the sole engineer at a 35-year-old ground transportation company with no existing technical infrastructure and no one to hand problems to.
+The role involved directly addressing customer challenges by identifying integration issues and data readiness gaps that were blocking AI implementation. I developed the necessary solutions and remained engaged until the new systems were fully implemented and operational. This experience occurred while I served as the sole engineer at a long-established ground transportation company that lacked a robust technical infrastructure, requiring a hands-on approach to problem-solving.
 
 The degree on my resume says Sociology. I'm not going to pretend that's a small thing to overlook. What I'll ask you to do instead is look at what I actually built.
 
