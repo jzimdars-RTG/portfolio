@@ -4,7 +4,7 @@ Ann Arbor, MI · 734-730-9150 · jzimdars@umich.edu
 
 ---
 
-I build and ship production AI systems — and then help the people around me actually use them. For the past 18 months I've functioned as a forward-deployed engineer embedded inside a real customer environment: identifying production blockers, shipping agentic workflows on Google Cloud, and driving adoption until the new systems became the default. My degree is in Sociology, not Computer Science. Everything I know about AI engineering I built by doing it — in production, under real constraints, with real users depending on the output. I'm applying to this role because I've already been doing it; I want to do it at scale, across many customers, with Google's full AI stack behind me.
+I build and ship production AI systems — and then I make sure the people around me actually use them. For the past 18 months I've functioned as a forward-deployed engineer embedded inside a real customer environment: owning the full lifecycle from identifying broken workflows to writing the code, running evals, driving adoption, and staying until the new system is the default. My degree is in Sociology. Everything I know about AI engineering I built in production, under real constraints, with real users depending on the output. I'm not transitioning into this field — I'm already in it.
 
 ---
 
@@ -14,12 +14,12 @@ I build and ship production AI systems — and then help the people around me ac
 **Business Systems Specialist & Executive Assistant to the CEO and CFO**  
 *Nov 2024 – Present*
 
-Embedded builder at a 35-year-old, 100-market ground transportation SMB. Sole engineer responsible for identifying high-friction workflows, prototyping rapidly, and shipping production systems to internal stakeholders — functioning as a one-person forward-deployed engineering team inside a non-technical organization.
+Sole engineer at a 35-year-old, 100-market ground transportation SMB. Identify high-friction workflows, prototype rapidly, and ship production systems to internal stakeholders — functioning as a one-person forward-deployed engineering team inside a non-technical organization.
 
 **AI systems, agentic workflows, and production deployment**
 - Designed and shipped the **Quote Calculator** *(in active daily use by sales and dispatch)*: a production agentic LLM workflow that parses inbound customer emails with **Gemini 2.0 Flash on Vertex AI**, routes across a **LangGraph multi-agent graph** (14 trip types × 14 vehicle classes), and outputs structured quotes — eliminating a previously manual, error-prone quoting process.
 - Built and maintain **`jz-genai-agent-toolkit`** ([github.com/jzimdars-RTG/JZ-genai-](https://github.com/jzimdars-RTG/JZ-genai-)): an open-source vendor-agnostic agentic core in **JavaScript (LangGraph.js) and Python**; implements multi-provider LLM routing, ReAct, self-reflection, hierarchical delegation, RAG retrieval (Vertex AI text-embedding-004 + cosine similarity), and human-in-the-loop checkpointing.
-- Instrumented a **Playwright-based LLM eval pipeline** across 12 parser scenarios after discovering the model was reliably wrong on multi-leg itineraries; re-prompting against eval output raised accuracy to production threshold — demonstrating a build-measure-fix observability loop on a live agentic system.
+- Instrumented a **Playwright-based LLM eval pipeline** across 12 parser scenarios after discovering the model was reliably wrong on multi-leg itineraries; re-prompting against eval output raised accuracy to production threshold — a full observability-and-correction loop on a live agentic system.
 - Tracked **LLM-native metrics** per call: token consumption, cost-per-request, latency (p50/p95), and error rate via JSONL tracing; used data to drive prompt and routing decisions.
 - Introduced AI-assisted workflows and prompt engineering practices across executives, sales, dispatch, and operations; led hands-on adoption sessions until teams preferred the new systems over legacy processes.
 
