@@ -1,79 +1,66 @@
 # Joshua Zimdars
+**AI / Solutions Engineer**
 Ann Arbor, MI · 734-730-9150 · jzimdars@umich.edu  
-[linkedin.com/in/joshua-zimdars-1321a624b](https://linkedin.com/in/joshua-zimdars-1321a624b) · [jzimdars-rtg.github.io/portfolio](https://jzimdars-rtg.github.io/portfolio)
+[linkedin.com/in/joshua-zimdars-1321a624b](https://linkedin.com/in/joshua-zimdars-1321a624b) · [jzimdars-rtg.github.io/portfolio](https://jzimdars-rtg.github.io/portfolio) · [github.com/jzimdars-RTG](https://github.com/jzimdars-RTG)
 
 ---
 
-I build and ship production AI systems — and then I make sure the people around me actually use them. For the past 18 months I've functioned as a forward-deployed engineer embedded inside a real customer environment: owning the full lifecycle from identifying broken workflows to writing the code, running evals, driving adoption, and staying until the new system is the default. My degree is in Sociology. Everything I know about AI engineering I built in production, under real constraints, with real users depending on the output. I'm not transitioning into this field — I'm already in it.
+## Summary
+
+AI engineer who ships production LLM systems and drives them to daily adoption. For 18 months I've been the sole engineer embedded in a live production environment — owning the full lifecycle from broken workflow to shipped code, evals, and live use by real teams. I translate technical systems into business outcomes for non-technical stakeholders. I've fine-tuned and deployed a production parser model, built multi-agent LangGraph workflows, and shipped 10+ internal applications saving **2,800+ hours/year**. My degree is in Sociology; everything I know about AI engineering I built in production, with real users depending on the output. I'm not transitioning into this field — I'm already in it.
+
+---
+
+## Technical Skills
+
+**AI & agentic systems** — LLM fine-tuning (dataset harvesting, correction datasets, job submission + eval on Azure AI Foundry), multi-provider LLM routing & fallback chains, prompt engineering, RAG (embedding retrieval + keyword fallback), multi-agent orchestration (ReAct, self-reflection, hierarchical delegation), human-in-the-loop, LLM eval & snapshot-regression pipelines, MCP patterns  
+**Languages** — JavaScript (Node.js, React 19), Python (LangGraph, pandas), C# / .NET 8, PowerShell, SQL  
+**AI platforms & models** — Azure AI Foundry (fine-tuned gpt-4.1-mini), Vertex AI (Gemini 2.0 Flash, text-embedding-004), Azure AI Inference (Kimi K2.6), OpenAI, Claude  
+**Frameworks & observability** — LangGraph.js, LangGraph (Python), langchain-google-vertexai; per-call token/cost/latency (p50/p95) tracing via JSONL + live overlay  
+**Cloud** — Azure (App Service, Functions, Static Web Apps, SQL, Maps, AI Foundry, Key Vault, managed identity), Google Cloud (Vertex AI)  
+**Engineering & integrations** — REST APIs, Socket.io, .NET 8 / EF Core, Playwright (eval + regression), PowerShell CI/CD, Cloudflare Turnstile, rate limiting / CORS / security headers; QuoteBot, Freshdesk, Samsara telematics, Azure Maps  
+**Certifications** — MaintainX Administrator Foundations (2025) · Deloitte Future of Work Institute (2023)
 
 ---
 
 ## Experience
 
 ### Golden Limousine International — Ann Arbor, MI
-**Business Systems Specialist & Executive Assistant to the CEO and CFO**  
-*Nov 2024 – Present*
+**Business Systems Specialist** · *Nov 2024 – Present*
 
-Sole engineer at a 35-year-old, 100-market ground transportation SMB. Identify high-friction workflows, prototype rapidly, and ship production systems to internal stakeholders — functioning as a one-person forward-deployed engineering team inside a non-technical organization.
+Sole engineer at a 35-year-old, 100-market ground transportation SMB. Identify high-friction workflows, prototype rapidly, and ship production systems to non-technical stakeholders — owning everything from problem discovery to code, evals, adoption, and business outcome measurement.
 
-**AI systems, agentic workflows, and production deployment**
-- Designed and shipped the **Quote Calculator** *(in active daily use by sales and dispatch)*: a production agentic LLM workflow that parses inbound customer emails with **Gemini 2.0 Flash on Vertex AI**, routes across a **LangGraph multi-agent graph** (14 trip types × 14 vehicle classes), and outputs structured quotes — eliminating a previously manual, error-prone quoting process.
-- Built and maintain **`jz-genai-agent-toolkit`** ([github.com/jzimdars-RTG/JZ-genai-](https://github.com/jzimdars-RTG/JZ-genai-)): an open-source vendor-agnostic agentic core in **JavaScript (LangGraph.js) and Python**; implements multi-provider LLM routing, ReAct, self-reflection, hierarchical delegation, RAG retrieval (Vertex AI text-embedding-004 + cosine similarity), and human-in-the-loop checkpointing.
-- Instrumented a **Playwright-based LLM eval pipeline** across 12 parser scenarios after discovering the model was reliably wrong on multi-leg itineraries; re-prompting against eval output raised accuracy to production threshold — a full observability-and-correction loop on a live agentic system.
-- Tracked **LLM-native metrics** per call: token consumption, cost-per-request, latency (p50/p95), and error rate via JSONL tracing; used data to drive prompt and routing decisions.
-- Introduced AI-assisted workflows and prompt engineering practices across executives, sales, dispatch, and operations; led hands-on adoption sessions until teams preferred the new systems over legacy processes.
+**AI systems, fine-tuning & agentic workflows**
+- Designed and shipped the **Quote Calculator** *(in active daily use by sales and dispatch)* — a production agentic LLM workflow that parses inbound customer emails, routes across a **LangGraph multi-agent graph** (14 trip types × 14 vehicle classes), and outputs structured quotes, eliminating a manual, error-prone process.
+- Built an **end-to-end LLM fine-tuning pipeline**: harvested production quotes into training data, generated correction datasets from eval failures, and submitted/evaluated fine-tune jobs on **Azure AI Foundry** — shipping a fine-tuned **gpt-4.1-mini** parser to production.
+- Engineered a **multi-provider LLM fallback chain** — fine-tuned Foundry (gpt-4.1-mini, ~1–2s) → OpenAI → Kimi K2.6 — with runtime-switchable, A/B-comparable backends and a health probe reporting which provider is live.
+- Implemented **self-reflection and human-in-the-loop** in the live agent graph: failed parses route through a correction prompt (max 2 retries) before a human-approval gate, with node-by-node progress streamed over SSE.
+- Stood up an **LLM eval + snapshot-regression suite** (15 Playwright specs) — a "golden quotes" harness locking pricing output against known-good fixtures plus a QuoteBot replay harness — raising multi-leg-itinerary accuracy to production threshold.
+- Led hands-on adoption sessions translating the Quote Calculator for sales and dispatch teams, moving them from legacy spreadsheet workflows to daily tool use within two weeks.
+- Built and maintain **`jz-genai-agent-toolkit`** — an open-source vendor-agnostic agentic core (LangGraph.js + Python); multi-provider routing, ReAct, self-reflection, hierarchical delegation, RAG (Vertex AI embeddings + cosine similarity), human-in-the-loop. [github.com/jzimdars-RTG/JZ-genai-](https://github.com/jzimdars-RTG/JZ-genai-)
+- Shipped a **Detroit Tigers booking + research platform** *(production)* — a booking funnel orchestrating the full QuoteBot lifecycle with automated Freshdesk ticketing, plus a **RAG research assistant** over a custom knowledge base via Azure Foundry.
 
-**Engineering and platform**
-- Re-platformed the rate card into a **.NET 8 / EF Core / Azure SQL pricing API** *(9 controllers, 22 entities)* with a 10-phase product roadmap.
-- Built a **real-time vehicle-tracking PWA** for U-M Hospital shuttles *(5,000+ monthly riders)* — cut customer status inquiries **40%** and freed **1,095 dispatch hours/year**.
-- Built a **real-time vehicle detailing system** *(React 19 + Socket.io + Node)* with a 14-point QA checklist and tablet-optimized UI.
-- Built a **Python/pandas passenger-analytics pipeline** now used in account renewal conversations with U-M Hospital.
-- Shipped 8 internal applications collectively saving **2,800+ hours/year**.
-
-**Executive support and operations**
-- Prepare CEO/CFO weekly briefings and board-prep materials; lead cross-functional governance cadence across HR, IT, Safety, Fleet, and Operations.
-- Cut IT support tickets **30%** by standardizing **60+ devices** under JAMF MDM; reduced deployment time **70%** with PowerShell CI/CD on Azure.
-- Built a CDL driver recruitment site with full UTM/GA4 attribution in a day, giving leadership visibility into recruiting-channel performance across 4 job boards and 4 CDL roles.
-
----
-
-### University of Michigan, Institute for Social Research — Ann Arbor, MI
-**Research Assistant** · May – Aug 2022  
-Synthesized international health-policy datasets into briefings for senior researchers; produced quantitative and qualitative analyses presented at academic forums.
-
-### Earlier
-**Server**, Barton Hills Country Club (2024) and Palio Restaurant (2021–2023) — consultative, top-of-floor sales performer; built repeat clientele in high-touch hospitality settings.  
-**Volunteer**, Delonis Homeless Shelter (2022).
+**Engineering & platform**
+- Built a 14-model pricing engine including an **OTR cost-plus engine** with a **DOT Hours-of-Service compliance check** and a 2026 demand calendar driving dynamic multipliers.
+- Integrated **Samsara fleet telematics** for real-time vehicle status, and hardened the public booking endpoint (Cloudflare Turnstile, rate limiting, CORS, security headers) on **Azure App Service + Static Web App** with secrets in **Key Vault** via managed identity.
+- Re-platformed the rate card into a **.NET 8 / EF Core / Azure SQL pricing API** (9 controllers, 22 entities).
+- Built a **real-time shuttle-tracking PWA** for U-M Hospital *(5,000+ monthly riders)* — cut status inquiries **40%** and freed **1,095 dispatch hours/year**.
+- Standardized **60+ devices** under JAMF MDM (cut IT tickets **30%**); built PowerShell CI/CD on Azure (cut deployment time **70%**).
+- Shipped 10+ internal applications collectively saving **2,800+ hours/year**.
 
 ---
 
 ## Education
 
-**University of Michigan**, Ann Arbor, MI  
-**B.A., Sociology of Health and Medicine** · May 2024 · Michigan Club Lacrosse (2 yrs)  
-*Equivalent practical experience in AI/ML systems engineering, agentic workflow development, and cloud platform deployment — acquired entirely through production work.*
+**University of Michigan**, Ann Arbor, MI — **B.A., Sociology of Health and Medicine** · May 2024  
+*Equivalent practical experience in AI/ML systems engineering, agentic workflows, LLM fine-tuning, and cloud deployment — acquired entirely through production work.*
 
 ---
 
 ## Selected Projects · [jzimdars-rtg.github.io/portfolio](https://jzimdars-rtg.github.io/portfolio)
 
-- **GenAI Agent Toolkit** — vendor-agnostic LangGraph agentic core in **JavaScript and Python**; multi-provider LLM routing, self-reflection, **RAG retrieval** (Vertex AI embeddings + cosine similarity), ReAct, hierarchical delegation, human-in-the-loop. [github.com/jzimdars-RTG/JZ-genai-](https://github.com/jzimdars-RTG/JZ-genai-)
-- **Quote Calculator** *(in active production use)* — AI-assisted quoting and dispatch platform; Gemini 2.0 Flash on Vertex AI, LangGraph multi-agent graph, 14 trip types × 14 vehicles, Playwright eval suite, JSONL observability.
-- **Pricing API** — .NET 8 / EF Core / Azure SQL; 9 controllers, 22 entities, 10-phase roadmap.
-- **Shuttle Tracking PWA** — real-time vehicle map for 5K+ monthly U-M Hospital riders; reduced inquiry volume 40%.
-- **Driver Recruitment Site** — UTM/GA4 attribution stack. Live at charterbusdrivers.com.
-
----
-
-## Skills
-
-**AI engineering & agentic systems** — prompt engineering, Retrieval-Augmented Generation (RAG), multi-agent orchestration (ReAct, self-reflection, hierarchical delegation), LLM evaluation pipelines, human-in-the-loop, MCP patterns  
-**Languages** — JavaScript (Node.js, React 19), **Python** (LangGraph, pandas, data pipelines), C# / .NET 8, PowerShell, SQL, VBA  
-**AI platforms** — Google Vertex AI (Gemini 2.0 Flash, text-embedding-004), Azure AI Inference (Kimi K2), OpenAI, Claude, GitHub Copilot  
-**Agentic frameworks** — LangGraph.js, LangGraph (Python), langchain-google-vertexai; patterns: ReAct, self-reflection, human-in-the-loop  
-**LLM-native observability** — per-call token accounting, cost-per-request, latency (p50/p95), JSONL tracing, error rate  
-**Cloud platforms** — Google Cloud Platform (Vertex AI, GCP), Azure (Functions, Static Web Apps, SQL, Maps, AI Inference, MDM/Intune)  
-**Engineering** — REST APIs, Socket.io, ES modules, .NET 8 / EF Core, PowerShell CI/CD, Playwright (LLM eval), JAMF Now MDM  
-**Data & analytics** — SQL, Python/pandas, Excel modeling, GA4, UTM attribution, dashboarding  
-**Strategy & operations** — pricing strategy, unit economics, stakeholder alignment, change management, governance cadence  
-**Certifications** — MaintainX Administrator Foundations (2025) · Deloitte Future of Work Institute (2023)
+- **GenAI Agent Toolkit** — vendor-agnostic LangGraph core (JS + Python); multi-provider routing, self-reflection, RAG, ReAct, hierarchical delegation, human-in-the-loop. [github.com/jzimdars-RTG/JZ-genai-](https://github.com/jzimdars-RTG/JZ-genai-)
+- **Quote Calculator** *(production)* — fine-tuned gpt-4.1-mini on Azure Foundry, multi-provider fallback, LangGraph graph, Samsara telematics, OTR engine with DOT HOS, 15-spec Playwright eval + golden-quotes regression.
+- **Tigers Game-Day Platform** *(production)* — booking funnel + RAG assistant; QuoteBot + Freshdesk orchestration, Azure Foundry RAG, deployed on Azure with Key Vault + managed identity.
+- **Pricing API** — .NET 8 / EF Core / Azure SQL; 9 controllers, 22 entities.
+- **Shuttle Tracking PWA** — real-time map for 5K+ monthly U-M Hospital riders; cut inquiries 40%.
