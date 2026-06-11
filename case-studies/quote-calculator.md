@@ -1,7 +1,7 @@
 # Rebuilding Sales Operations at a 100-City SMB
 ### The Quote Calculator: an AI-assisted pricing & dispatch platform that cut sales response 10x — *currently in active development*
 
-**Author:** Joshua Zimdars · Business Systems Specialist & EA to the CEO/CFO, Golden Limousine International  
+**Author:** Joshua Zimdars · Business Systems Specialist  
 **Status:** ⚒️ **In active development** · Already in daily use by sales and dispatch  
 **Stack:** Vanilla JS (ES modules), Node.js proxy, **Google Vertex AI (Gemini 2.0 Flash)** + Azure AI Inference (Kimi K2) — swappable backends, **LangGraph.js** (multi-agent graph with ReAct + self-reflection), **LLM-native observability** (tokens, cost, latency, JSONL tracing), Azure Maps, QuoteBot API, Samsara API, Playwright. Generic agentic core lives in <a href="https://github.com/jzimdars19/jz-genai-agent-toolkit">`jz-genai-agent-toolkit`</a>; this repo consumes it via git subtree.
 
@@ -10,7 +10,7 @@
 ---
 
 ## TL;DR
-Pricing knowledge at Golden Limo was scattered across a dozen people, tribal memory, and spreadsheets no one fully owned. No two reservationists priced the same trip the same way. I interviewed every stakeholder, unified the logic, and built the company's first complete pricing model — starting in Excel to prove it worked, then shipping it as a production AI platform. The **Quote Calculator** AI-parses a customer email, prices any trip instantly across 14 trip types and 14 vehicle classes, validates with dispatch, and books the job. Median quote time: under 3 minutes, down from 20–34. Reservationists stopped doing pricing math and started focusing on the customer.
+Pricing knowledge at [Company] was scattered across a dozen people, tribal memory, and spreadsheets no one fully owned. No two reservationists priced the same trip the same way. I interviewed every stakeholder, unified the logic, and built the company's first complete pricing model — starting in Excel to prove it worked, then shipping it as a production AI platform. The **Quote Calculator** AI-parses a customer email, prices any trip instantly across 14 trip types and 14 vehicle classes, validates with dispatch, and books the job. Median quote time: under 3 minutes, down from 20–34. Reservationists stopped doing pricing math and started focusing on the customer.
 
 ---
 
@@ -75,10 +75,10 @@ The 10-phase rollout plan is documented and tracked.
 
 ## Why this matters for Generative AI Forward Deployed Engineer roles
 
-This project maps to every responsibility in the Google Cloud GenAI FDE job description:
+This project maps to every responsibility in the [Target Company Cloud] GenAI FDE job description:
 
 - **"Transition from rapid prototypes to production-grade agentic workflows (e.g., multi-agent systems, MCP servers)."** The Quote Calculator went from a Kimi-only single-shot parser to a full LangGraph state graph with ReAct retry, self-reflection, and a human-approval node — all running against live customer emails in daily production use.
-- **"Architect the 'connective tissue' linking Google's AI products to customers' live infrastructure, including APIs, legacy data silos, and security perimeters."** Vertex AI Gemini → Node proxy → QuoteBot (legacy dispatch API) → Samsara (fleet telematics) → Azure Maps. Credential rotation handled via per-request `.env` re-read; path-traversal-safe static layer; no API keys ever ship to the browser.
+- **"Architect the 'connective tissue' linking [Target Company]'s AI products to customers' live infrastructure, including APIs, legacy data silos, and security perimeters."** Vertex AI Gemini → Node proxy → QuoteBot (legacy dispatch API) → Samsara (fleet telematics) → Azure Maps. Credential rotation handled via per-request `.env` re-read; path-traversal-safe static layer; no API keys ever ship to the browser.
 - **"Build high-performance evaluation pipelines and observability frameworks to ensure agentic systems meet requirements for accuracy, safety, and latency."** Playwright parser eval suite (12 scenarios × 14 trip types), synthetic batch validator (`fake-quotes-test.js`), and a JSONL telemetry pipeline capturing tokens, cost, latency, p50/p95, and error rate per backend and per operation. A live in-browser agent-trace overlay visualizes every node firing in real time.
-- **"Identify recurring field patterns and friction points across Google's AI stack, converting them into reusable modules."** The generic agentic core was extracted into [`jz-genai-agent-toolkit`](https://github.com/jzimdars19/jz-genai-agent-toolkit) as a portable, vendor-agnostic library — exactly the "field insight → reusable module → formal product feature request" loop the JD describes.
+- **"Identify recurring field patterns and friction points across [Target Company]'s AI stack, converting them into reusable modules."** The generic agentic core was extracted into [`jz-genai-agent-toolkit`](https://github.com/jzimdars19/jz-genai-agent-toolkit) as a portable, vendor-agnostic library — exactly the "field insight → reusable module → formal product feature request" loop the JD describes.
 - **"Collaborate with customer engineering teams to instill development best practices."** Six weeks of sitting next to dispatchers until they preferred the new workflow. Versioned `config.js` so any historical quote can be replayed against the rate card that was live the day it was given. Documented 10-phase roadmap, gated rollout.

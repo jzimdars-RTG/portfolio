@@ -1,11 +1,11 @@
 # Joshua Zimdars — Portfolio
 
-**Business Systems Specialist & Executive Assistant to the CEO/CFO @ Golden Limousine International**  
-Ann Arbor, MI · [LinkedIn](https://linkedin.com/in/joshua-zimdars-1321a624b) · jzimdars@umich.edu · [Portfolio Site](https://jzimdars-rtg.github.io/portfolio) · [Resume PDF](pdfs/joshua-zimdars-resume.pdf)
+**Business Systems Specialist**  
+Ann Arbor, MI · [LinkedIn] · [Portfolio Site](https://jzimdars-rtg.github.io/portfolio) · [Resume PDF](pdfs/joshua-zimdars-resume.pdf)
 
 I turn ambiguous business problems into shipped systems. Over 18 months at a 35-year-old ground-transportation SMB, I've built the strategy & operations function from scratch — pricing, sales ops, paid acquisition, executive reporting, and the tools that make all of it work. I'm a **self-taught engineer** who learned to build production systems using AI as my primary accelerator (GitHub Copilot, Claude, GPT-4, Azure AI Inference). Designing prompts, building agentic workflows, and evaluating LLM output is part of my daily toolkit, not a side interest.
 
-This portfolio is a curated read of that work. It spans two surfaces: **production systems shipped at Golden Limousine** (operator-facing tools, the AI-assisted quote engine, the pricing API) and **open-source AI engineering work on my personal account** (<a href="https://github.com/jzimdars-RTG/JZ-genai-">`jz-genai-agent-toolkit`</a>) — the generic, vendor-agnostic agentic core that the Golden Limo platform now consumes.
+This portfolio is a curated read of that work. It spans two surfaces: **production systems shipped at [Company]** (operator-facing tools, the AI-assisted quote engine, the pricing API) and **open-source AI engineering work on my personal account** (<a href="https://github.com/jzimdars-RTG/JZ-genai-">`jz-genai-agent-toolkit`</a>) — the generic, vendor-agnostic agentic core that the [Company] platform now consumes.
 
 ---
 
@@ -31,5 +31,5 @@ This portfolio is a curated read of that work. It spans two surfaces: **producti
 - **Instrument before automating.** You can't improve what you can't measure.
 
 
-Open to two role shapes where the work sits between AI engineering and the customer: **Generative AI Forward Deployed Engineer** (Google Cloud, Anthropic, OpenAI solutions teams) and **Strategy & Operations** roles that touch product and data. Based in Ann Arbor, MI.
+Open to two role shapes where the work sits between AI engineering and the customer: **Generative AI Forward Deployed Engineer** and **Strategy & Operations** roles that touch product and data. Based in Ann Arbor, MI.
 

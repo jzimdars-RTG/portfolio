@@ -1,20 +1,20 @@
 # Building the Attribution Stack Our Recruiter Needed
 ### One-day build that gave the recruiting and marketing team a professional tool — without paying an agency to do it
 
-**Author:** Joshua Zimdars · Business Systems Specialist & EA to the CEO/CFO, Golden Limousine International  
-**Status:** Live · charterbusdrivers.com  
+**Author:** Joshua Zimdars · Business Systems Specialist  
+**Status:** Live · [recruitment-site.com]  
 **Stack:** Vanilla JS/CSS, GA4, UTM tracking, GitHub Pages
 
 ---
 
 ## TL;DR
-Golden Limo has a recruiter and a marketing person. What they didn't have was a proper landing page and attribution stack for CDL driver hiring — the kind of thing an agency would charge $8–15K to build and six weeks to deliver. I shipped it in a day: one domain, four position types, two markets, full UTM-based source attribution, GA4 event tracking, and per-channel campaign URLs for Indeed, ZipRecruiter, LinkedIn, and Facebook. The team got a professional tool immediately. Leadership got cost-per-applicant visibility by source for the first time. No vendor, no delay.
+[Company] has a recruiter and a marketing person. What they didn't have was a proper landing page and attribution stack for CDL driver hiring — the kind of thing an agency would charge $8–15K to build and six weeks to deliver. I shipped it in a day: one domain, four position types, two markets, full UTM-based source attribution, GA4 event tracking, and per-channel campaign URLs for Indeed, ZipRecruiter, LinkedIn, and Facebook. The team got a professional tool immediately. Leadership got cost-per-applicant visibility by source for the first time. No vendor, no delay.
 
 ---
 
 ## The Problem
 
-Ground transportation has a structural hiring problem: every regional operator is fishing in the same shallow pool of CDL holders, and the major job boards (Indeed and ZipRecruiter) charge per click. Without proper attribution, you can't tell which channel is producing actual hires versus tire-kickers — so budget gets spread across everything and nothing gets optimized. Golden Limo had a recruiter, a marketing person, and an active hiring budget. What they were missing was a purpose-built page with a proper instrumentation layer underneath it.
+Ground transportation has a structural hiring problem: every regional operator is fishing in the same shallow pool of CDL holders, and the major job boards (Indeed and ZipRecruiter) charge per click. Without proper attribution, you can't tell which channel is producing actual hires versus tire-kickers — so budget gets spread across everything and nothing gets optimized. [Company] had a recruiter, a marketing person, and an active hiring budget. What they were missing was a purpose-built page with a proper instrumentation layer underneath it.
 
 Constraints:
 - Four position types across two markets (Detroit and Ann Arbor), each with different shift profiles.
@@ -25,7 +25,7 @@ Constraints:
 
 ```mermaid
 flowchart LR
-    A[Indeed / ZipRecruiter\nLinkedIn / Facebook] -->|UTM-tagged URL| B[charterbusdrivers.com\nLanding Page]
+    A[Indeed / ZipRecruiter\nLinkedIn / Facebook] -->|UTM-tagged URL| B["[recruitment-site.com]\nLanding Page"]
     B --> C[GA4 Event Capture\nSource persisted on landing]
     C --> D[Apply Click\nor Phone Click]
     D --> E[✅ Applicant attributed\nto source channel]
@@ -42,10 +42,10 @@ Two bets:
 The cheap intervention was attribution, not creative. I built a single landing page, then layered on a complete UTM taxonomy (`utm_source`, `utm_medium`, `utm_campaign`, plus `utm_content` for position-level routing). Every channel got its own URL. Every campaign got its own URL.
 
 ```
-charterbusdrivers.com?utm_source=indeed&utm_medium=paid&utm_campaign=q1-2025&utm_content=charter
-charterbusdrivers.com?utm_source=ziprecruiter&utm_medium=paid&utm_campaign=q1-2025&utm_content=cdl
-charterbusdrivers.com?utm_source=linkedin&utm_medium=paid&utm_campaign=professional&utm_content=executive
-charterbusdrivers.com?utm_source=facebook&utm_medium=paid&utm_campaign=social-q1&utm_content=shuttle
+[recruitment-site.com]?utm_source=indeed&utm_medium=paid&utm_campaign=q1-2025&utm_content=charter
+[recruitment-site.com]?utm_source=ziprecruiter&utm_medium=paid&utm_campaign=q1-2025&utm_content=cdl
+[recruitment-site.com]?utm_source=linkedin&utm_medium=paid&utm_campaign=professional&utm_content=executive
+[recruitment-site.com]?utm_source=facebook&utm_medium=paid&utm_campaign=social-q1&utm_content=shuttle
 ```
 
 The page captures source on landing, persists it, and forwards it through to the apply CTA so leadership can attribute *applications* (not just clicks) back to the channel that produced them.
