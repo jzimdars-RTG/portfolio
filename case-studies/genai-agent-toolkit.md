@@ -31,7 +31,7 @@ flowchart TD
 
 ## Why I Built This
 
-The Quote Calculator at Golden Limousine uses AI-assisted pricing — a prompt-to-structured-output pattern. It works, but the LLM call was a black box: no token counts, no cost tracking, no retry logic, no way to ask "did this call actually work well?" I built this toolkit to solve that — and to go deeper on the patterns I'd need to work on production agentic systems at scale.
+The Quote Calculator at [Company] uses AI-assisted pricing — a prompt-to-structured-output pattern. It works, but the LLM call was a black box: no token counts, no cost tracking, no retry logic, no way to ask "did this call actually work well?" I built this toolkit to solve that — and to go deeper on the patterns I'd need to work on production agentic systems at scale.
 
 This is the reusable core I'd extract from any customer engagement. Every decision was made with "can I hand this to another engineer and have them understand it in 10 minutes" as the bar.
 
