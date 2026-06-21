@@ -3,9 +3,23 @@
 **Business Systems Specialist & Executive Assistant to the CEO/CFO @ Golden Limousine International**  
 Ann Arbor, MI · [LinkedIn](https://linkedin.com/in/joshua-zimdars-1321a624b) · jzimdars@umich.edu · [Portfolio Site](https://jzimdars-rtg.github.io/portfolio) · [Resume PDF](pdfs/joshua-zimdars-resume.pdf)
 
-I turn ambiguous business problems into shipped systems. Over 18 months at a 35-year-old ground-transportation SMB, I've built the strategy & operations function from scratch — pricing, sales ops, paid acquisition, executive reporting, and the tools that make all of it work. I'm a **self-taught engineer** who learned to build production systems using AI as my primary accelerator (GitHub Copilot, Claude, GPT-4, Azure AI Inference). Designing prompts, building agentic workflows, and evaluating LLM output is part of my daily toolkit, not a side interest.
+I turn ambiguous business problems into measurable outcomes — and I build the systems that make those outcomes stick.
 
-This portfolio is a curated read of that work. It spans two surfaces: **production systems shipped at Golden Limousine** (operator-facing tools, the AI-assisted quote engine, the pricing API) and **open-source AI engineering work on my personal account** (<a href="https://github.com/jzimdars-RTG/JZ-genai-">`jz-genai-agent-toolkit`</a>) — the generic, vendor-agnostic agentic core that the Golden Limo platform now consumes.
+Over 18 months as the sole technical operator embedded inside a 35-year-old, 100-market ground transportation company, I identified the highest-friction workflows, led requirements gathering with executives and frontline staff, shipped production systems, and drove adoption to daily use. The result: **2,800+ hours/year saved**, a 10× faster sales response cycle, and operational infrastructure that didn't exist before I joined.
+
+I didn't inherit a team, a roadmap, or a playbook. I built all three.
+
+This portfolio is a curated read of that work — spanning **production systems shipped at Golden Limousine** (an AI-assisted quote engine, a real-time fleet tracking PWA, a .NET 8 pricing API) and **open-source tooling** (a vendor-agnostic GenAI agentic core in JavaScript and Python). Every project started with a business problem, was measured against defined success criteria, and was handed to real users who now depend on it daily.
+
+---
+
+## What I'm Pursuing
+
+I'm actively targeting roles at the intersection of AI and customer-facing business impact, and I plan to pursue a full-time MBA (University of Michigan Ross) to build the leadership platform to do this at scale.
+
+The two role shapes I'm focused on:
+- **Generative AI Forward Deployed Engineer** — Google Cloud, Anthropic, OpenAI, Databricks, Scale AI
+- **Strategy & Operations** — AI-native or AI-forward companies where technical depth and operational instinct are both required
 
 ---
 
@@ -22,14 +36,25 @@ This portfolio is a curated read of that work. It spans two surfaces: **producti
 
 ---
 
-## What I'm About
+## How I Think About Work
 
-- **Operator first, engineer second.** I write production code so the right tool gets built — but the goal is always the business outcome.
-- **AI-native builder.** GitHub Copilot, Claude, GPT-4, and Azure AI Inference are how I build. Prompt engineering, agentic workflows, and LLM evaluation are real skills I use daily.
-- **Numbers everywhere.** If a decision can't be defended with a number, it isn't a decision yet.
-- **Adoption beats elegance.** A clever system nobody uses is worse than a clunky one everyone does.
-- **Instrument before automating.** You can't improve what you can't measure.
+- **Outcomes over outputs.** A shipped system that nobody uses is a failure. I measure adoption, not deployment.
+- **Instrument before automating.** Every system I build has visibility into what it's doing and what it costs. You can't improve what you can't measure.
+- **Operator first, engineer second.** I write production code so the right tool gets built — but the goal is always the business result.
+- **Numbers make decisions.** If a decision can't be defended with a number, it isn't a decision yet.
+- **Change management is part of the product.** The biggest adoption win I had came from sitting next to dispatchers for six weeks, not from writing better code.
 
+---
 
-Open to two role shapes where the work sits between AI engineering and the customer: **Generative AI Forward Deployed Engineer** (Google Cloud, Anthropic, OpenAI solutions teams) and **Strategy & Operations** roles that touch product and data. Based in Ann Arbor, MI.
+## By the Numbers
 
+| Metric | Result |
+|---|---|
+| Hours saved annually (across all systems) | **2,800+** |
+| Sales response time reduction (Quote Calculator) | **10× faster** (20–34 min → 2–3 min) |
+| Dispatch inquiry reduction (Shuttle Tracking) | **40%** |
+| Deployment time reduction (PowerShell CI/CD) | **70%** |
+| IT ticket reduction (JAMF MDM) | **30%** |
+| Quote accuracy improvement (Playwright eval suite) | **~75% → 90%+** |
+| Devices standardized under MDM | **60+** |
+| Production applications shipped | **10+** |
