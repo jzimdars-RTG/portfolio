@@ -7,7 +7,7 @@ Ann Arbor, MI · 734-730-9150 · jzimdars@umich.edu
 
 ## Summary
 
-Business systems analyst who turns ambiguous operational problems into shipped, adopted systems. For 18 months I've been the sole business systems owner at a 35-year-old, 100-market transportation company — gathering requirements directly from the CEO and CFO, mapping broken workflows, and delivering internal and customer-facing tools that teams use from day one. I've built a shared pricing engine that now powers both an internal dispatch calculator and a public self-service booking product, automated ticketing and reporting workflows, and driven adoption across sales, dispatch, and executive teams. I translate business needs into requirements, requirements into systems, and systems into measurable outcomes — **10+ tools shipped, 2,800+ hours/year saved**.
+Business systems analyst who turns ambiguous operational problems into shipped, adopted systems. For 18 months I've been the sole business systems owner at a 35-year-old, 100-market transportation company — gathering requirements directly from the CEO and CFO, mapping broken workflows, and delivering internal and customer-facing tools that teams use from day one. I've built a shared pricing engine that now powers both an internal dispatch calculator and a public self-service booking product, as well as automated ticketing and reporting workflows, and has driven adoption across sales, dispatch, and executive teams. I use Claude Code every day as core infrastructure in how I build and ship systems. I translate business needs into requirements, requirements into systems, and systems into measurable outcomes — 10+ tools shipped, 2,800+ hours/year saved.
 
 ---
 
@@ -16,7 +16,7 @@ Business systems analyst who turns ambiguous operational problems into shipped, 
 **Business analysis & process design** — requirements gathering (incl. direct executive stakeholders), workflow mapping, process improvement, gap analysis, UAT/system testing, stakeholder management, change management, documentation  
 **Systems & reporting** — pricing/quoting systems design, reporting cadences & dashboards, ticketing/workflow automation (Freshdesk), incident & event management systems, cross-functional governance  
 **Technical fluency** — SQL, REST API integrations, Azure (App Service, SQL, Key Vault), Microsoft Entra ID (access control/identity), pricing/rules-engine logic, JavaScript/Node.js, .NET  
-**Tools & platforms** — Freshdesk, Samsara fleet telematics, JAMF MDM, Microsoft Teams, MaintainX, Azure AI Foundry (AI-assisted workflows)  
+**Tools & platforms** — Claude Code, Freshdesk, Samsara fleet telematics, JAMF MDM, Microsoft Teams, MaintainX, Azure AI Foundry (AI-assisted workflows)  
 **Certifications** — MaintainX Administrator Foundations (2025) · Deloitte Future of Work Institute (2023)
 
 ---
