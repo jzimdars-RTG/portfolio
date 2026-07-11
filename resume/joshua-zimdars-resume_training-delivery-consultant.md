@@ -16,11 +16,11 @@ Early-career software engineer with hands-on experience implementing and support
 
 ## Engineering Focus
 
-**Hands-on:** JavaScript · TypeScript · Python · C# / .NET 8 · Node.js · React · Next.js · SQL · Git / GitHub · RESTful API integration · Azure OpenAI · Azure AI Foundry · LangGraph · HTML / CSS
+**Hands-on:** JavaScript · TypeScript · Python · C# / .NET 8 · Node.js · React · Next.js · SQL · Git / GitHub · RESTful API integration · Azure OpenAI · Azure AI Foundry · LangGraph · HTML / CSS · object-oriented programming
 
-**Exposure / Coursework:** Object-oriented programming (via C# and TypeScript) · Cloud services (Azure) · CI/CD concepts · API design patterns
+**Exposure / Concepts applied:** CI/CD pipelines · cloud infrastructure (Azure) · API design patterns · containerization concepts
 
-**Strong Interest:** Java · Spring · Docker / containerization · AWS · distributed systems · Kafka · Elasticsearch · observability and monitoring tooling
+**Actively exploring:** Java · Spring · Docker · AWS · distributed systems · Kafka · Elasticsearch · observability and monitoring tooling
 
 ---
 
