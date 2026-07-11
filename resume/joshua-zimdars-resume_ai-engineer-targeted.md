@@ -1,5 +1,5 @@
 # Joshua Zimdars
-Technical Change Management Delivery Analyst | AI-Enabled Business Systems
+Backend Software Engineer | .NET 8 APIs & AI-Enabled Cloud Systems
 
 Ann Arbor, MI · 734-730-9150 · jzimdars@umich.edu  
 [linkedin.com/in/joshua-zimdars-1321a624b](https://linkedin.com/in/joshua-zimdars-1321a624b) · [jzimdars-rtg.github.io/portfolio](https://jzimdars-rtg.github.io/portfolio) · [github.com/jzimdars-RTG](https://github.com/jzimdars-RTG)
@@ -10,7 +10,7 @@ Open to relocation nationwide · Hybrid / On-site
 
 ## Summary
 
-Technical business systems analyst with 18+ months of sole-owner experience delivering technology and workflow change inside a live 100-market transportation company. Partner with executive and frontline stakeholders to gather requirements, research current-state processes, summarize findings, and turn them into implementation plans, system changes, and adopted workflows. Bring strengths relevant to Organizational Change Management (OCM), including stakeholder management, organizational alignment, communications, training enablement, troubleshooting, data analysis, quality assurance, and project coordination. Built and rolled out AI-enabled and operational systems that saved 2,800+ hours per year while improving adoption, visibility, and business process consistency.
+Backend-focused engineer with 18+ months of sole-owner experience shipping cloud-based services, REST APIs, and AI-enabled operational systems inside a live 100-market transportation company. Build object-oriented, governed service layers and maintainable backend workflows across C# / .NET 8, EF Core, Azure SQL, Azure App Service, Microsoft Entra ID, Azure AI Foundry, and Azure OpenAI. Translate ambiguous requirements into phased work plans, production implementations, UAT/regression testing, and daily operational support for sales, dispatch, billing, and leadership teams. Known for troubleshooting live issues, improving reporting, observability, and auditability, and applying experimentation to real workflows that save 2,800+ hours per year.
 
 ---
 
@@ -19,46 +19,43 @@ Technical business systems analyst with 18+ months of sole-owner experience deli
 ### Golden Limousine International — Ann Arbor, MI
 Business Systems Specialist · Nov 2024 – Present
 
-Sole business systems owner supporting technology implementation, process redesign, and day-to-day adoption across a 35-year-old transportation company operating in 100 markets.
+Sole engineer supporting backend implementation, workflow modernization, and day-to-day operational support across a 35-year-old transportation company operating in 100 markets.
 
-- Gather requirements directly from the CEO, CFO, sales, dispatch, and operations staff; research current-state workflows and summarize findings into implementation priorities.
-- Converted tribal knowledge into a unified pricing model first proven in Microsoft Excel, creating a shared baseline for later system implementation.
-- Supported rollout of new pricing and dispatch workflows by aligning stakeholders, troubleshooting issues at the dispatch desk, refining the user experience, and helping teams transition off legacy spreadsheet processes.
-- Authored phased implementation plans for pricing, quoting, booking, and reporting systems, including a 10-phase roadmap that aligned project milestones and related workstreams across leadership and operations.
-- Built communication and enablement into new tools through guided workflows, structured ticketing, audit trails, and clear handoffs between sales, dispatch, billing, and executive stakeholders.
-- Re-platformed a 35-year-old Excel/VBA pricing process into a versioned .NET 8 / EF Core / Azure SQL API and AI-assisted quoting workflow, reducing median quote time from 20–34 minutes to 2–3 minutes.
-- Delivered 10+ internal applications and systems that save 2,800+ hours per year, including pricing, dispatch, booking, reporting, and fleet-visibility tools.
+- Gather requirements directly from the CEO, CFO, sales, dispatch, and operations teams; break down current-state workflows into implementation priorities, phased work plans, and a 10-phase roadmap spanning pricing, quoting, booking, and reporting systems.
+- Re-platformed a 35-year-old Excel/VBA pricing process into a versioned .NET 8 / EF Core / Azure SQL pricing API and AI-assisted quoting workflow, reducing median quote time from 20–34 minutes to 2–3 minutes.
+- Built a governed service layer for pricing logic first proven in Microsoft Excel, creating a shared backend source of truth reused across internal quoting, booking, and reporting workflows.
+- Built communication and quality controls into new systems through guided workflows, structured ticketing, audit trails, and clear handoffs between sales, dispatch, billing, and executive stakeholders.
+- Supported rollout and live operations by troubleshooting issues at the dispatch desk, refining the user experience, and helping teams transition off legacy spreadsheet processes while maintaining adoption.
 - Built executive reporting cadence and real-time dashboards for pricing, operations, and fleet status; integrated Samsara telematics into dispatch workflows to improve visibility and decision-making.
+- Designed and shipped the Quote Calculator, an AI-assisted pricing and dispatch workflow in active daily use; built Azure AI Foundry fine-tuning workflows, Playwright eval and snapshot-regression coverage, and a multi-provider fallback chain with health reporting.
+- Delivered 10+ internal applications and systems that save 2,800+ hours per year, including pricing, dispatch, booking, reporting, and fleet-visibility tools.
 - Partnered on a real-time shuttle-tracking tool serving 5,000+ monthly riders, cutting dispatch inquiries 40% and freeing 1,095 dispatch hours per year.
 
 ---
 
 ## Selected Projects
 
-- **Quote Calculator** — AI-assisted pricing and dispatch workflow built from stakeholder interviews, unified business rules, phased rollout, and daily adoption support; improved quote turnaround from 20–34 minutes to 2–3 minutes.
-- **Pricing API** — versioned .NET 8 / EF Core / Azure SQL implementation that turned a legacy Excel pricing process into a governed service layer with a 10-phase roadmap for future workstreams.
-- **Customer Booking & Reservation Platform** — self-service quote-to-reservation workflow sharing one pricing source of truth with internal teams and creating structured Freshdesk handoffs for dispatch and billing.
+- **Pricing API** — versioned .NET 8 / EF Core / Azure SQL implementation that turned a legacy Excel pricing process into a governed service layer with 9 controllers, 22 entities, and a 10-phase roadmap for future workstreams.
+- **Quote Calculator** — AI-assisted pricing and dispatch workflow with Azure AI Foundry fine-tuning, LangGraph orchestration, Playwright eval + regression coverage, and multi-provider fallback logic for daily live use.
+- **Customer Booking & Reservation Platform** — self-service quote-to-reservation web app sharing one pricing source of truth with internal teams; structured Freshdesk handoffs for dispatch and billing, zero-build SPA architecture, Azure App Service deployment plan, and Microsoft Entra invite-only authentication.
+- **Wedding Transportation Booking App** — Next.js 16 / React 19 / TypeScript guided flow with deterministic AI-optional plan generation, Azure OpenAI concierge actions, server-validated lead capture, and session-persistent form state.
 - **Shuttle Tracking PWA** — real-time visibility tool for 5,000+ monthly riders that reduced dispatch interruptions 40% and improved service transparency for riders and staff.
 
 ---
 
 ## Skills
 
-### Change Delivery & Analysis
-- Organizational Change Management (OCM) support
-- Stakeholder management and organizational alignment
-- Requirements gathering, workflow mapping, and impact assessment
-- Change readiness, communications, and training enablement
-- Troubleshooting, project coordination, work-plan development, executive reporting, and quality assurance
+### Backend & Cloud Engineering
+C# / .NET 8 · EF Core · REST APIs · SQL · Azure App Service · Azure SQL · Azure AI Foundry · Azure OpenAI · Microsoft Entra ID · Node.js
 
-### Technology Implementation
-Technology implementation projects, workflow automation, AI-enabled business systems, Freshdesk, Samsara telematics, Microsoft Entra ID, Azure App Service, Azure SQL, Azure AI Foundry, REST APIs
+### Testing, Quality & Operations
+Playwright eval and snapshot-regression testing · UAT and regression testing · Troubleshooting · Audit trails · Executive reporting and dashboarding · Observability and health reporting · Real-time operational support · Quality assurance
 
-### Research, Data & Documentation
-Research, data analysis, findings summaries, Microsoft Excel modeling, dashboarding, audit trails, UAT and regression testing, process documentation
+### Product Engineering & Delivery
+Requirements gathering · Workflow decomposition · Phased implementation planning · Stakeholder collaboration · Work-plan development · Process redesign · Guided workflow adoption
 
-### Technical Tools
-JavaScript / TypeScript, Node.js, React, Next.js, Python, C# / .NET 8, SQL, PowerShell, LangGraph, Azure OpenAI
+### Additional Technical Tools
+JavaScript / TypeScript · Python · React · Next.js · PowerShell · LangGraph · GitHub · Freshdesk · Samsara telematics · Microsoft Excel modeling
 
 ---
 
