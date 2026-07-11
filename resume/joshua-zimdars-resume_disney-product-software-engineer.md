@@ -1,5 +1,5 @@
 # Joshua Zimdars
-Technical Change Management Delivery Analyst | AI-Enabled Business Systems
+Product Software Engineer I | Backend APIs & Cloud Services
 
 Ann Arbor, MI · 734-730-9150 · jzimdars@umich.edu  
 [linkedin.com/in/joshua-zimdars-1321a624b](https://linkedin.com/in/joshua-zimdars-1321a624b) · [jzimdars-rtg.github.io/portfolio](https://jzimdars-rtg.github.io/portfolio) · [github.com/jzimdars-RTG](https://github.com/jzimdars-RTG)
@@ -10,7 +10,7 @@ Open to relocation nationwide · Hybrid / On-site
 
 ## Summary
 
-Technical business systems analyst with 18+ months of sole-owner experience delivering technology and workflow change inside a live 100-market transportation company. Partner with executive and frontline stakeholders to gather requirements, research current-state processes, summarize findings, and turn them into implementation plans, system changes, and adopted workflows. Bring strengths relevant to Organizational Change Management (OCM), including stakeholder management, organizational alignment, communications, training enablement, troubleshooting, data analysis, quality assurance, and project coordination. Built and rolled out AI-enabled and operational systems that saved 2,800+ hours per year while improving adoption, visibility, and business process consistency.
+Technical business systems analyst with 18+ months of sole-owner experience delivering backend services, APIs, and workflow change inside a live 100-market transportation company. Partner with executive and frontline stakeholders to gather requirements, research current-state processes, summarize findings, and turn them into implementation plans, system changes, and adopted workflows. Bring strengths in stakeholder management, troubleshooting, data analysis, quality assurance, and project coordination, with hands-on experience building .NET 8 / EF Core / Azure SQL services, REST APIs, automated regression tests, and cloud deployments. Built and rolled out AI-enabled and operational systems that saved 2,800+ hours per year while improving adoption, visibility, and business process consistency.
 
 ---
 
@@ -52,13 +52,13 @@ Sole business systems owner supporting technology implementation, process redesi
 - Troubleshooting, project coordination, work-plan development, executive reporting, and quality assurance
 
 ### Technology Implementation
-Technology implementation projects, workflow automation, AI-enabled business systems, Freshdesk, Samsara telematics, Microsoft Entra ID, Azure App Service, Azure SQL, Azure AI Foundry, REST APIs
+Technology implementation projects, workflow automation, AI-enabled business systems, Freshdesk, Samsara telematics, Microsoft Entra ID, Azure App Service, Azure SQL, Azure AI Foundry, RESTful APIs, CI/CD
 
 ### Research, Data & Documentation
 Research, data analysis, findings summaries, Microsoft Excel modeling, dashboarding, audit trails, UAT and regression testing, process documentation
 
 ### Technical Tools
-JavaScript / TypeScript, Node.js, React, Next.js, Python, C# / .NET 8, SQL, PowerShell, LangGraph, Azure OpenAI
+JavaScript / TypeScript, Node.js, React, Next.js, Python, C# / .NET 8, SQL, PowerShell, LangGraph, Azure OpenAI, Git, Playwright
 
 ---
 
