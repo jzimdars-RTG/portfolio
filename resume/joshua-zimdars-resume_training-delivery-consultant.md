@@ -1,5 +1,5 @@
 # Joshua Zimdars
-Training Delivery & Change Management Analyst | Technology Adoption
+Training Delivery Consultant, Training and Design
 
 Ann Arbor, MI · 734-730-9150 · jzimdars@umich.edu  
 [linkedin.com/in/joshua-zimdars-1321a624b](https://linkedin.com/in/joshua-zimdars-1321a624b) · [jzimdars-rtg.github.io/portfolio](https://jzimdars-rtg.github.io/portfolio) · [github.com/jzimdars-RTG](https://github.com/jzimdars-RTG)
