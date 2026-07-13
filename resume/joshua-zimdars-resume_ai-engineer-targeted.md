@@ -32,6 +32,7 @@ Sole technical operator delivering production Generative AI and full-stack produ
 - Built guided workflows, structured Freshdesk handoffs, audit trails, and enablement materials that make AI-generated outputs actionable for sales, dispatch, billing, and executive stakeholders.
 - Built real-time dashboards and integrated Samsara telematics into dispatch workflows, giving leadership and operators actionable pricing, operations, and fleet visibility.
 - Partnered on a real-time shuttle-tracking PWA serving 5,000+ monthly riders; reduced dispatch inquiries 40% and freed 1,095 dispatch hours annually.
+- Self-taught and applied AI coding agents (Claude Code, Codex, GitHub Copilot coding agent) daily for 2+ years to design, build, and ship production systems; know from hands-on iteration what these tools do well and where they require human oversight.
 
 ---
 
@@ -47,7 +48,7 @@ Sole technical operator delivering production Generative AI and full-stack produ
 ## Skills
 
 ### Applied AI & Product Delivery
-Generative AI applications, AI-assisted workflows, Azure AI Foundry, Azure OpenAI, LangGraph, rapid experimentation, product discovery, requirements gathering, workflow design, user enablement
+Generative AI applications, AI-assisted workflows, Azure AI Foundry, Azure OpenAI, LangGraph, AI coding agents (Claude Code, Codex, GitHub Copilot coding agent), rapid experimentation, product discovery, requirements gathering, workflow design, user enablement
 
 ### Full-Stack & Cloud
 JavaScript / TypeScript, Node.js, React, Next.js, Python, C# / .NET 8, SQL, REST APIs, EF Core, Azure App Service, Azure SQL, Microsoft Entra ID, PowerShell
