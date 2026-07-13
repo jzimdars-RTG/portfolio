@@ -140,3 +140,7 @@ For these roles, paste a 2-sentence "why me" in the message/notes field instead 
 | 18 | Cursor | AI Engineer | | | | |
 | 19 | Linear | AI Engineer | | | | |
 | 20 | Together AI | AI Engineer | | | | |
+| 21 | OpenAI | Forward Deployed Engineer | | Ashby | | |
+| 22 | Deloitte | AI Workplace Platform Consultant | | iCIMS | | |
+| 23 | Brellium | Forward Deployed Engineer (Healthcare) | | Ashby | | |
+| 24 | The Economist Group | Senior AI Engineer, AI Lab | | Varies | | |
