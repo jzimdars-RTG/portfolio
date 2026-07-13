@@ -19,15 +19,18 @@ Customer-facing builder with 18+ months of sole-owner experience turning ambiguo
 ### Golden Limousine International — Ann Arbor, MI
 Business Systems Specialist · Nov 2024 – Present
 
-Sole technical operator delivering customer- and operations-facing products across a 35-year-old company operating in 100 markets.
+Sole technical operator delivering production Generative AI and full-stack products for customer- and operations-facing workflows at a 35-year-old company operating in 100 markets.
 
-- Run discovery with the CEO, CFO, sales, dispatch, and operations teams; convert observations and requirements into prioritized experiments, technical designs, and shipped solutions.
-- Re-platformed a 35-year-old Excel/VBA pricing process into a versioned .NET 8 / EF Core / Azure SQL API and AI-assisted quoting workflow, reducing median quote time from 20–34 minutes to 2–3 minutes.
-- Deliver full-stack products from workflow design and user experience through APIs, data models, Azure deployment, and operational support; shipped 10+ systems saving 2,800+ hours annually.
-- Rapidly iterated pricing, dispatch, booking, reporting, and fleet-visibility tools alongside daily users, using live feedback to improve usability, adoption, and business outcomes.
-- Built guided workflows, structured Freshdesk handoffs, audit trails, and enablement materials that connect sales, dispatch, billing, and executive stakeholders around new systems.
-- Created a unified pricing model from tribal knowledge, first validating the business logic in Excel before evolving it into a governed service layer and 10-phase product roadmap.
-- Built real-time dashboards and integrated Samsara telematics into dispatch workflows, giving leadership and operators actionable visibility into pricing, operations, and fleet status.
+- Lead discovery with the CEO, CFO, sales, dispatch, and operations teams; turn ambiguous workflow problems into AI experiments, technical designs, deployed applications, and user enablement.
+- Designed and shipped the daily-use **Quote Calculator**: a LangGraph agentic workflow that parses inbound customer emails, routes requests across trip and vehicle logic, and returns structured quotes for sales and dispatch.
+- Built the end-to-end LLM improvement loop for quoting: harvested production examples, created correction datasets from evaluation failures, fine-tuned and evaluated a GPT-4.1-mini parser in Azure AI Foundry, and deployed it to production.
+- Engineered multi-provider LLM routing and fallback across Azure AI Foundry, Azure OpenAI, and Kimi, with runtime-selectable backends and health checks to keep the quoting workflow available.
+- Created an LLM evaluation and snapshot-regression suite with golden quote fixtures and QuoteBot replays; use results to identify failure modes, refine prompts, and safely improve production behavior.
+- Re-platformed a 35-year-old Excel/VBA pricing process into a versioned .NET 8 / EF Core / Azure SQL API that grounds the AI workflow in governed business logic; reduced median quote time from 20–34 minutes to 2–3 minutes.
+- Build and deploy AI-enabled full-stack applications end to end—from workflow and user experience through APIs, data models, Azure services, observability, and production support; shipped 10+ systems saving 2,800+ hours annually.
+- Rapidly iterate AI-assisted pricing, dispatch, booking, reporting, and fleet-visibility tools alongside daily users, combining live feedback and operational metrics to improve adoption and business outcomes.
+- Built guided workflows, structured Freshdesk handoffs, audit trails, and enablement materials that make AI-generated outputs actionable for sales, dispatch, billing, and executive stakeholders.
+- Built real-time dashboards and integrated Samsara telematics into dispatch workflows, giving leadership and operators actionable pricing, operations, and fleet visibility.
 - Partnered on a real-time shuttle-tracking PWA serving 5,000+ monthly riders; reduced dispatch inquiries 40% and freed 1,095 dispatch hours annually.
 
 ---
