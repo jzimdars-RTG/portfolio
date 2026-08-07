@@ -1,31 +1,41 @@
 # Joshua Zimdars
-Associate Product Designer | Digital Experience & CMS Enablement
+Product Software Engineer | Backend Systems & Application Implementation
 
 Ann Arbor, MI · 734-730-9150 · jzimdars@umich.edu  
 [linkedin.com/in/joshua-zimdars-1321a624b](https://linkedin.com/in/joshua-zimdars-1321a624b) · [jzimdars-rtg.github.io/portfolio](https://jzimdars-rtg.github.io/portfolio) · [github.com/jzimdars-RTG](https://github.com/jzimdars-RTG)
 
-Open to relocation to Orlando, FL and nationwide · Hybrid / On-site
+Open to relocation nationwide · Hybrid / On-site
 
 ---
 
 ## Summary
 
-Digital experience and CMS enablement professional with hands-on WordPress implementation, responsive web content creation, HTML/CSS front-end work, and cross-functional product delivery. As the sole business systems owner at a 35-year-old company operating in 100 markets, implemented and continue to maintain the company website (goldenlimo.com) using WordPress CMS — configuring page builder components, authoring responsive content for desktop and mobile, optimizing media for SEO, applying accessibility-aware publishing practices, and governing content accuracy on behalf of leadership. Led user-centered discovery, UX validation, and phased platform adoption across 10+ digital products that save 2,800+ hours annually, including reducing quote time from 20–34 minutes to 2–3 minutes through iterative workflow redesign and AI-assisted tooling.
+Early-career software engineer with hands-on experience implementing and supporting 10+ production applications and systems in a live business environment. Builds full-stack solutions using JavaScript/TypeScript, Python, C#/.NET 8, and Node.js; integrates RESTful APIs and third-party services; and develops AI-powered workflows with Azure OpenAI, Azure AI Foundry, and LangGraph. Translates stakeholder requirements into working software through iterative development, user acceptance testing (UAT), regression testing, and structured quality validation. Delivered measurable impact including 2,800+ hours saved annually and a reduction in median quote time from 20–34 minutes to 2–3 minutes. Collaborative and detail-oriented, with a track record of working cross-functionally to deliver reliable, user-facing digital services. Eager to grow backend engineering skills through mentorship, code reviews, and hands-on work with scalable, high-throughput systems.
+
+---
+
+## Engineering Focus
+
+**Hands-on:** JavaScript · TypeScript · Python · C# / .NET 8 · Node.js · React · Next.js · SQL · Git / GitHub · RESTful API integration · Azure OpenAI · Azure AI Foundry · LangGraph · HTML / CSS · object-oriented programming
+
+**Exposure / Concepts applied:** CI/CD pipelines · cloud infrastructure (Azure) · API design patterns · containerization concepts
+
+**Actively exploring:** Java · Spring · Docker · AWS · distributed systems · Kafka · Elasticsearch · observability and monitoring tooling
 
 ---
 
 ## Core Competencies
 
-- WordPress CMS implementation, page builder configuration, and editorial support
-- Responsive web content design for desktop and mobile experiences
-- HTML/CSS front-end implementation and layout customization
-- User-centered design, workflow discovery, and iterative improvement
-- UX validation, user acceptance testing, and quality assurance
-- Content governance, audits, templates, and reusable patterns
-- Accessibility-aware content practices and SEO fundamentals
-- Cross-functional stakeholder collaboration and requirements gathering
-- Process documentation, platform adoption guidance, and knowledge transfer
-- AI-assisted workflows and emerging digital tools
+- Application implementation, iterative improvement, and operational support across production systems
+- Backend service and API development: Node.js, Python, C#/.NET 8, RESTful integration
+- Object-oriented programming, data modeling, and SQL query design
+- User acceptance testing (UAT), regression testing, and quality assurance
+- Requirements gathering, technical workflow analysis, and phased implementation planning
+- Version control with Git/GitHub; structured delivery across multi-phase roadmaps
+- AI-assisted tooling: Azure OpenAI, Azure AI Foundry, LangGraph
+- Troubleshooting, defect resolution, and operational support for live user-facing services
+- Cross-functional collaboration with operations, leadership, and technical stakeholders
+- Technical documentation, system diagrams, and observability support
 
 ---
 
@@ -34,40 +44,44 @@ Digital experience and CMS enablement professional with hands-on WordPress imple
 ### Golden Limousine International — Ann Arbor, MI
 **Business Systems Specialist** · Nov 2024 – Present
 
-Sole business systems owner supporting digital experience, CMS management, technology implementation, UX validation, and day-to-day platform adoption across a 35-year-old transportation company operating in 100 markets.
+Sole business systems owner responsible for implementing, maintaining, and supporting 10+ internal applications and digital systems across a 35-year-old company operating in 100 markets. Works cross-functionally with CEO, CFO, sales, dispatch, and operations to translate requirements into working software, then validates behavior through structured testing and iterative refinement before and after each rollout.
 
-- Implement and maintain the company website (goldenlimo.com) using WordPress CMS; configure page builder components (Gutenberg / WYSIWYG), create and edit responsive web content for desktop and mobile viewports, and perform ongoing editorial updates on behalf of leadership.
-- Apply HTML/CSS adjustments to customize page layouts, resolve display issues, and tailor the site experience across viewport sizes.
-- Optimize images and media assets for web performance and SEO; govern content accuracy, brand alignment, and accessibility-aware publishing practices across all site pages.
-- Conduct content quality reviews, validate pages against usability and display standards, and maintain documentation covering site structure, content patterns, and publishing guidelines.
-- Gather requirements from the CEO, CFO, sales, dispatch, and operations teams; analyze current-state workflows; and translate findings into implementation priorities and digital content plans.
-- Convert complex, experience-based processes into clear documentation, structured templates, guided workflows, and repeatable handoffs to increase platform adoption and team self-sufficiency.
-- Embed in cross-functional delivery to guide and validate user experience from planning through launch; execute user acceptance testing, regression testing, and quality checks before and after rollout.
-- Author phased implementation plans across a 10-phase digital roadmap, aligning milestones and workstreams across leadership, operations, and technical stakeholders.
-- Deliver 10+ internal applications and systems saving 2,800+ hours annually; reduce median quote time from 20–34 minutes to 2–3 minutes through user-centered workflow redesign and AI-assisted tooling.
-- Support real-time shuttle-tracking digital experience for 5,000+ monthly riders, reducing dispatch inquiries by 40% and freeing 1,095 annual dispatch hours.
+- Implemented 10+ internal applications and systems — including an AI-assisted pricing engine, a self-service booking platform, and a real-time tracking experience — delivering 2,800+ hours in annual operational savings.
+- Reduced median quote time from 20–34 minutes to 2–3 minutes by implementing AI-assisted logic, redesigning the end-to-end quoting workflow, and iterating based on user acceptance testing and quality feedback.
+- Supported implementation and ongoing operational monitoring of a real-time shuttle-tracking digital experience serving 5,000+ monthly riders; reduced dispatch inquiry volume by 40%, freeing 1,095 annual dispatch hours.
+- Applied object-oriented and functional patterns in JavaScript/TypeScript, Python, and C#/.NET 8 to build, configure, and extend application logic across multiple production systems.
+- Integrated third-party RESTful APIs and cloud services — including Azure OpenAI, Azure AI Foundry, and Samsara telematics — into operational workflows; managed data flow, error handling, and service reliability.
+- Built AI-powered multi-step agent workflows using LangGraph and Azure OpenAI; defined tool-call logic, composed agent graphs, and validated output behavior through iterative testing cycles.
+- Translated requirements from stakeholders into technical specifications and workflow models; authored phased implementation plans across a 10-phase digital roadmap, aligning milestones with leadership, operations, and technical stakeholders.
+- Performed user acceptance testing (UAT), regression testing, and quality checks before and after each application rollout to validate behavior against defined requirements and confirm production readiness.
+- Maintained and supported live, user-facing services; monitored for issues, troubleshot failures, and resolved defects to preserve service continuity across operations.
+- Authored technical documentation, system diagrams, and operational runbooks to support team adoption, reduce support overhead, and ensure continuity.
+- Implement and maintain the company website (goldenlimo.com); configure components, optimize assets for web performance and SEO, and govern content accuracy on behalf of leadership.
 
 ---
 
-## Selected Digital & Implementation Projects
+## Selected Projects
 
-- **goldenlimo.com (WordPress CMS)** — Implement and maintain the company website using WordPress CMS; configure page builder components, author responsive content for desktop and mobile, apply SEO and accessibility-aware practices, and govern content accuracy on behalf of company leadership.
-- **Quote Calculator** — Led user-centered discovery, workflow analysis, and UX validation for an AI-assisted pricing and dispatch tool; translated business rules into a practical, iteratively improved digital workflow used in live operations daily.
-- **Customer Booking & Reservation Platform** — Helped implement and operationalize a self-service quote-to-reservation web experience; validated user workflows, guided stakeholder onboarding, and improved usability through structured feedback and iteration.
-- **Shuttle Tracking PWA** — Supported implementation, user onboarding, and adoption of a real-time visibility experience for 5,000+ monthly riders; validated UX, documented support workflows, and reduced dispatch interruptions by 40%.
+- **Quote Calculator (AI-Assisted Pricing Engine)** — Implemented an AI-assisted pricing and dispatch tool using Azure OpenAI and LangGraph; designed multi-step agent workflows, integrated business rules, and validated behavior through iterative UAT cycles. Reduced median quote time from 20–34 minutes to 2–3 minutes in live operations.
+- **Customer Booking & Reservation Platform** — Implemented and operationalized a self-service quote-to-reservation web experience; integrated third-party booking APIs, validated end-to-end user workflows, and resolved defects through structured regression testing.
+- **Shuttle Tracking PWA** — Supported implementation and operational monitoring of a real-time tracking experience for 5,000+ monthly riders; integrated the Samsara telematics API, validated service reliability, documented support workflows, and reduced dispatch interruptions by 40%.
+- **goldenlimo.com (Web Platform)** — Implement and maintain the company website; configure page components, optimize assets for web performance, and ensure content quality and accessibility on behalf of leadership.
 
 ---
 
 ## Skills
 
-### Web & CMS
-WordPress CMS · WordPress page builders (Gutenberg) · HTML · CSS · Responsive web content · Image and media optimization · SEO fundamentals · Accessibility-aware content practices · Content governance
+### Backend & Application Development
+JavaScript / TypeScript · Python · C# / .NET 8 · Node.js · React · Next.js · SQL · RESTful API integration · LangGraph · Azure OpenAI · Azure AI Foundry
 
-### UX, Design & Delivery
-User-centered design · Workflow discovery and analysis · UX validation · Requirements gathering · User acceptance testing (UAT) · Regression testing · Quality assurance · Stakeholder collaboration · Process documentation · Platform adoption · Phased delivery
+### Testing & Quality
+User acceptance testing (UAT) · Regression testing · Quality assurance · Defect resolution · System validation
 
-### Technology & Tools
-JavaScript / TypeScript · React · Next.js · Node.js · Python · C# / .NET 8 · Azure AI Foundry · LangGraph · Azure OpenAI · SQL · Microsoft Excel/VBA · Freshdesk · Samsara telematics
+### Engineering Practices
+Git / GitHub · Requirements analysis · Technical documentation · Phased delivery · Cross-functional collaboration · Operational support and monitoring
+
+### Tools & Platforms
+Azure AI Foundry · Azure OpenAI · Samsara telematics · Freshdesk · Microsoft Excel / VBA · WordPress CMS · HTML · CSS
 
 ---
 
@@ -81,4 +95,4 @@ B.A., Sociology of Health and Medicine · May 2024
 ## Additional Information
 
 Portfolio: [jzimdars-rtg.github.io/portfolio](https://jzimdars-rtg.github.io/portfolio)  
-Authorized to work in the United States · Open to relocation to Orlando, FL and nationwide · Available for hybrid and on-site work
+Authorized to work in the United States · Open to relocation nationwide · Available for hybrid and on-site work
